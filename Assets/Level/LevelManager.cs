@@ -52,7 +52,6 @@ public class LevelManager : MonoBehaviour {
 
 		size.x = rawData.IndexOf('\n');
 		size.y = (rawData.Length + 1) / (size.x + 1);
-		Debug.Log(size.y);
 		realData = new TileData[size.x, size.y];
 
 		for (int y = 0; y < size.y; y += 1)
@@ -99,6 +98,9 @@ public class LevelManager : MonoBehaviour {
 
 	public void SmoothHitCheck(IntVector2 fromPos, IntVector2 toPos)
     {
+		if (InBounds(toPos) || InBounds(fromPos))
+			return;
+
         if(realData[fromPos.x, fromPos.y].occupant && realData[fromPos.x, fromPos.y].occupant.tag == "Collectable" &&
             realData[toPos.x, toPos.y].occupant && realData[toPos.x, toPos.y].occupant.tag == "enemy")
         {
