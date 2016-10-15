@@ -10,20 +10,18 @@ public enum Direction {
 	WEST
 }
 
-public class PlayerMovement : MonoBehaviour {
+public class PlayerMovement : BaseMovement {
 
 	public static PlayerMovement Player;
-	public IntVector2 position;
 
 	List<Direction> movementQueue;
 
 
 	// Use this for initialization
-	void Start () {
+	protected override void Start () {
+		base.Start();
 		Player = this;
-		position.x = Mathf.RoundToInt(transform.position.x);
-		position.y = Mathf.RoundToInt(transform.position.z);
-		PlayerVision.S.OnPlayerMove(position);
+		PlayerVision.S.OnPlayerMove(pos);
 
 		movementQueue = new List<Direction>();
 	}
@@ -46,31 +44,22 @@ public class PlayerMovement : MonoBehaviour {
 			Direction toDir = movementQueue[0];
 			movementQueue.RemoveAt(0);
 
-			IntVector2 newPos = position + GetVectorFromDirection(toDir);
-			if (LevelManager.S.InBounds(newPos) && TowardsPassable(newPos) && (LevelManager.S.realData[newPos.x, newPos.y].occupant == null))
-			{
-				LevelManager.S.MoveSomething(position, newPos);
-				Game_Manager.S.OnPlayerMove();
-				PlayerVision.S.OnPlayerMove(newPos);
-				position = newPos;
-			}
+			IntVector2 newPos = pos + IntVector2.fromDirection(toDir);
+			MoveIfAble(newPos);
 		}
 	}
 
-	IntVector2 GetVectorFromDirection(Direction d)
+	protected override void Move(IntVector2 newPos)
 	{
-		if (d == Direction.NORTH)
-			return IntVector2.up;
-		if (d == Direction.EAST)
-			return IntVector2.right;
-		if (d == Direction.SOUTH)
-			return IntVector2.down;
-		else
-			return IntVector2.left;
+		LevelManager.S.MoveOccupant(pos, newPos);
+		StartCoroutine(SmoothMove(pos, newPos));
+		pos = newPos;
+		Game_Manager.S.OnPlayerMove();
+		PlayerVision.S.OnPlayerMove(newPos);
 	}
-
 
 	bool TowardsPassable(IntVector2 newPos) {
 		return LevelManager.S.realData [newPos.x, newPos.y].passable;
 	}
+
 }

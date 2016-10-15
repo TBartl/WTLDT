@@ -100,13 +100,13 @@ MonoBehaviour:
     asciiChar: 79
   - light: 0
     passable: 0
-    visionBlock: 2
+    visionBlock: 1
     occupant: {fileID: 0}
     prefab: {fileID: 1000013571357732, guid: f65f230a8050663478cf7df1cd689074, type: 2}
     asciiChar: 88
   - light: 0
     passable: 1
-    visionBlock: 2
+    visionBlock: 1
     occupant: {fileID: 0}
     prefab: {fileID: 1000013947755016, guid: 0e004052f52486b4f88b189ea1ca4ee2, type: 2}
     asciiChar: 71

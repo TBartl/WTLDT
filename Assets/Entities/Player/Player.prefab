@@ -105,7 +105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1edf60653e5cb8545a427f67334cd84d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraDist: 7
+  cameraDist: 8
   cameraRotation: 60
 --- !u!114 &114000012484629618
 MonoBehaviour:

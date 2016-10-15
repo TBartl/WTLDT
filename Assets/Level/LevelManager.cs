@@ -75,39 +75,19 @@ public class LevelManager : MonoBehaviour {
 			}
 		}
 	}
+	
 
-	// Move unit by one block. This handles tile properties and moves the gameobject. Used for both player and enemies.
-	public void MoveSomething(IntVector2 fromPos, IntVector2 toPos) {
+	public void MoveOccupant(IntVector2 fromPos, IntVector2 toPos) {
 		// Update the unit's gameobject's position
 
-		GameObject unit = realData[fromPos.x, fromPos.y].occupant;
-
-		StartCoroutine(SmoothMoveOccupant(fromPos, toPos));
-
 		// New tile gains reference to unit
-		realData[toPos.x, toPos.y].occupant = unit;
+		realData[toPos.x, toPos.y].occupant = realData[fromPos.x, fromPos.y].occupant;
 
 		// Previous tile loses reference to unit
 		realData[fromPos.x, fromPos.y].occupant = null;
 	}
 
-	IEnumerator SmoothMoveOccupant(IntVector2 fromPos, IntVector2 toPos)
-	{
-		GameObject g = realData[fromPos.x, fromPos.y].occupant;
-		g.transform.position = (Vector3)fromPos;
-
-		IntVector2 diff = toPos - fromPos;
-		g.transform.rotation = Quaternion.Euler(0, Mathf.Rad2Deg * Mathf.Atan2(diff.y, -diff.x) - 90, 0);
-
-		float length = .1f;
-		for (float f = 0; f < length; f += Time.deltaTime)
-		{
-			float percent = f / length;
-			g.transform.position = Vector3.Lerp((Vector3)fromPos, (Vector3)toPos +  Vector3.up * Mathf.Sin(percent * Mathf.PI / 2) * .5f, percent);
-			yield return null;
-		}
-		g.transform.position = (Vector3)toPos;
-	}
+	
 
 	public bool InBounds (IntVector2 pos)
 	{

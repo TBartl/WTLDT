@@ -52,4 +52,16 @@ public struct IntVector2
 	public static IntVector2 right = new IntVector2(1, 0);
 	public static IntVector2 down = new IntVector2(0, -1);
 	public static IntVector2 left = new IntVector2(-1, 0);
+
+	public static IntVector2 fromDirection(Direction d)
+	{
+		if (d == Direction.NORTH)
+			return up;
+		else if (d == Direction.EAST)
+			return right;
+		else if (d == Direction.SOUTH)
+			return down;
+		else
+			return left;
+	}
 }
