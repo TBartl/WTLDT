@@ -95,11 +95,15 @@ public class LevelManager : MonoBehaviour {
 	{
 		GameObject g = realData[fromPos.x, fromPos.y].occupant;
 		g.transform.position = (Vector3)fromPos;
+
+		IntVector2 diff = toPos - fromPos;
+		g.transform.rotation = Quaternion.Euler(0, Mathf.Rad2Deg * Mathf.Atan2(diff.y, -diff.x) - 90, 0);
+
 		float length = .1f;
 		for (float f = 0; f < length; f += Time.deltaTime)
 		{
 			float percent = f / length;
-			g.transform.position = Vector3.Lerp((Vector3)fromPos, (Vector3)toPos, percent);
+			g.transform.position = Vector3.Lerp((Vector3)fromPos, (Vector3)toPos +  Vector3.up * Mathf.Sin(percent * Mathf.PI / 2) * .5f, percent);
 			yield return null;
 		}
 		g.transform.position = (Vector3)toPos;

@@ -26,9 +26,16 @@ public class PlayerCamera : MonoBehaviour {
     }
 
     void Update()
-    {
-        MoveRealCamera();
-    }
+	{
+		cameraPivot.transform.rotation = Quaternion.Euler(cameraRotation, 0, 0);
+		cameraPivot.transform.position = new Vector3(cameraPivot.transform.position.x, 0, cameraPivot.transform.position.z);
+		MoveRealCamera();
+	}
+	void LateUpdate()
+	{
+		cameraPivot.transform.rotation = Quaternion.Euler(cameraRotation, 0, 0);
+		cameraPivot.transform.position = new Vector3(cameraPivot.transform.position.x, 0, cameraPivot.transform.position.z);
+	}
 
     void MoveRealCamera()
     {
