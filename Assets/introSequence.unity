@@ -1285,7 +1285,7 @@ Prefab:
       propertyPath: m_Text
       value: 'Let this be a lesson:
 
-        Anyone who imposes their rule on this land will die by my hand.'
+        Anyone who imposes their rule on this land will die by my paws.'
       objectReference: {fileID: 0}
     - target: {fileID: 1000013169875910, guid: d497ecaca5eef6d49bbaca17bbb96033, type: 2}
       propertyPath: m_Name
