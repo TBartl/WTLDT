@@ -31,7 +31,10 @@ public class PlayerMovement : MonoBehaviour {
 	void Update () {
 		this.transform.position += Vector3.left * Time.deltaTime;
 		
-		
+
+
+
+
 		// Detect if there is any input from the player.
 
 		// Move Up

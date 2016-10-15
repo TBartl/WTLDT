@@ -74,15 +74,13 @@ public class LevelManager : MonoBehaviour {
 	public void MoveUnitByOne(IntVector2 fromPos, IntVector2 toPos) {
 
 		// Update the unit's gameobject's position
-<<<<<<< Updated upstream
 		Vector3 destination = (Vector3)toPos;
 		realData [toPos.x, toPos.y].occupant.transform.position = destination;
 
-=======
 //		Vector3 destination = Vector3(toPos);
 //		realData [toPos.x, toPos.y].occupant.transform.position = destination;
 		GameObject unit = realData[fromPos.x, fromPos.y].occupant;
->>>>>>> Stashed changes
+
 		// New tile gains reference to unit
 		realData[toPos.x, toPos.y].occupant = unit;
 
