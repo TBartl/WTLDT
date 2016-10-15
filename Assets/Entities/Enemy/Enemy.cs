@@ -9,6 +9,7 @@ public class Enemy : BaseMovement {
 	protected override void Start()
 	{
 		base.Start();
+		alarmRaised = false;
 	}
 
     public virtual void Move()

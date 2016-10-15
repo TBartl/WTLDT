@@ -1,41 +1,36 @@
 fileFormatVersion: 2
 guid: ca4bd39f0de841146b8b280d0f3702f5
-timeCreated: 1476486954
+timeCreated: 1476552757
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
     100000: 00-ground
     100002: 01-solid
-    100004: box
-    100006: grass
+    100004: grass
+    100006: rock
     100008: //RootNode
-    100010: rock
     400000: 00-ground
     400002: 01-solid
-    400004: box
-    400006: grass
+    400004: grass
+    400006: rock
     400008: //RootNode
-    400010: rock
     2300000: 00-ground
     2300002: 01-solid
-    2300004: box
-    2300006: grass
-    2300008: rock
+    2300004: grass
+    2300006: rock
     3300000: 00-ground
     3300002: 01-solid
-    3300004: box
-    3300006: grass
-    3300008: rock
+    3300004: grass
+    3300006: rock
     4300000: grass
-    4300002: box
+    4300002: rock
     4300004: 01-solid
     4300006: 00-ground
-    4300008: rock
     7400000: Default Take
     9500000: //RootNode
   materials:
-    importMaterials: 0
+    importMaterials: 1
     materialName: 0
     materialSearch: 1
   animations:
