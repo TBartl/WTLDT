@@ -47,7 +47,7 @@ public class PlayerMovement : MonoBehaviour {
 			movementQueue.RemoveAt(0);
 
 			IntVector2 newPos = position + GetVectorFromDirection(toDir);
-			if (LevelManager.S.InBounds(newPos))
+			if (LevelManager.S.InBounds(newPos) && TowardsPassable(newPos))
 			{
 				LevelManager.S.MoveSomething(position, newPos);
 				PlayerVision.S.OnPlayerMove(newPos);
@@ -68,5 +68,11 @@ public class PlayerMovement : MonoBehaviour {
 			return IntVector2.left;
 	}
 
+<<<<<<< HEAD
+=======
+	bool TowardsPassable(IntVector2 newPos) {
+		return LevelManager.S.realData [newPos.x, newPos.y].passable;
+	}
+>>>>>>> origin/master
 
 }
