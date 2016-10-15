@@ -1,0 +1,109 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1000013050856040}
+  m_IsPrefabParent: 1
+--- !u!1 &1000013050856040
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 4000012292828102}
+  - 114: {fileID: 114000013507247932}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4000012292828102
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013050856040}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &114000013507247932
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013050856040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30c467f569ded6a42832fd461a9206c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rawData: 'OOOOOOO
+
+    OOOOOOO
+
+    OOOOOOO
+
+    OOOPOOO
+
+    OOGOOOO
+
+    OOGOOOO
+
+    OOGOOOO
+
+    OOOOGGO
+
+    OOOOOOO
+
+    OOXGXOO
+
+    OOXKXOO
+
+    OOXXXOO
+
+    OOOOOOO'
+  tileProperties:
+  - light: 0
+    passable: 1
+    occupant: {fileID: 0}
+    prefab: {fileID: 1000012517458186, guid: 3f9fb1e9235171d4083d5e888a0ea40a, type: 2}
+    asciiChar: 79
+  - light: 0
+    passable: 0
+    occupant: {fileID: 0}
+    prefab: {fileID: 1000013571357732, guid: f65f230a8050663478cf7df1cd689074, type: 2}
+    asciiChar: 88
+  - light: 0
+    passable: 1
+    occupant: {fileID: 0}
+    prefab: {fileID: 1000012517458186, guid: 3f9fb1e9235171d4083d5e888a0ea40a, type: 2}
+    asciiChar: 71
+  - light: 0
+    passable: 1
+    occupant: {fileID: 0}
+    prefab: {fileID: 1000013947755016, guid: 0e004052f52486b4f88b189ea1ca4ee2, type: 2}
+    asciiChar: 80
+  - light: 0
+    passable: 1
+    occupant: {fileID: 1000013192762668, guid: 76fabec1afd1ce14eb72ed8019bd1e29, type: 2}
+    prefab: {fileID: 1000012517458186, guid: 3f9fb1e9235171d4083d5e888a0ea40a, type: 2}
+    asciiChar: 80
+  - light: 2
+    passable: 1
+    occupant: {fileID: 1000011881379720, guid: 5fa38392327377946b274be4f4570d9c, type: 2}
+    prefab: {fileID: 1000012517458186, guid: 3f9fb1e9235171d4083d5e888a0ea40a, type: 2}
+    asciiChar: 80
