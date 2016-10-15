@@ -28,8 +28,8 @@ public class LevelManager : MonoBehaviour {
 
 	public static LevelManager S;
 
-	[TextArea(3, 10)]
-	public string rawData;
+	public TextAsset textFile;
+	string rawData;
 
 	public IntVector2 size;
 	public TileData[,] realData;
@@ -49,9 +49,20 @@ public class LevelManager : MonoBehaviour {
 
 	void GenerateRealDataAndDraw()
 	{
+		rawData = textFile.text;
+		string correctedData = "";
+		for (int i = 0; i < rawData.Length; i++)
+		{
+			Debug.Log(correctedData);
+			if (rawData[i] != '\r')
+				correctedData = correctedData + rawData[i];
+		}
+		rawData = correctedData;
 
 		size.x = rawData.IndexOf('\n');
 		size.y = (rawData.Length + 1) / (size.x + 1);
+		
+
 		realData = new TileData[size.x, size.y];
 
 		for (int y = 0; y < size.y; y += 1)
