@@ -3,10 +3,9 @@ using System.Collections;
 
 public class Sentinel : Enemy {
 
-    public Direction currentDirection;
-
 	// Use this for initialization
 	void Start () {
+        
         float val = Random.Range(0, 1);
         if (val < 0.25f)
         {

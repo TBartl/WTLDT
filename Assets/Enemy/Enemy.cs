@@ -9,7 +9,7 @@ public class Enemy : MonoBehaviour {
     public Direction currentDirection;
 
 	// Use this for initialization
-	void Start () {
+	void Awake() {
         pos.x = Mathf.RoundToInt(transform.position.x);
         pos.y = Mathf.RoundToInt(transform.position.z);
     }
@@ -43,6 +43,7 @@ public class Enemy : MonoBehaviour {
         float xDif, yDif;
         xDif = Mathf.Abs(playerPos.x - pos.x);
         yDif = Mathf.Abs(playerPos.y - pos.y);
+        IntVector2 movePos = pos;
         if (xDif >= yDif)
         {
             if (playerPos.x < pos.x)
@@ -51,7 +52,6 @@ public class Enemy : MonoBehaviour {
                     currentDirection = Direction.WEST;
                 else
                 {
-                    IntVector2 movePos = pos;
                     movePos.x -= 1;
                     if (LevelManager.S.realData[movePos.x, movePos.y].passable)
                     {
@@ -65,7 +65,6 @@ public class Enemy : MonoBehaviour {
                     currentDirection = Direction.EAST;
                 else
                 {
-                    IntVector2 movePos = pos;
                     movePos.x += 1;
                     if (LevelManager.S.realData[movePos.x, movePos.y].passable)
                     {
@@ -82,7 +81,6 @@ public class Enemy : MonoBehaviour {
                     currentDirection = Direction.SOUTH;
                 else
                 {
-                    IntVector2 movePos = pos;
                     movePos.y -= 1;
                     if (LevelManager.S.realData[movePos.x, movePos.y].passable)
                     {
@@ -96,7 +94,7 @@ public class Enemy : MonoBehaviour {
                     currentDirection = Direction.NORTH;
                 else
                 {
-                    IntVector2 movePos = pos;
+                    
                     movePos.y += 1;
                     if (LevelManager.S.realData[movePos.x, movePos.y].passable)
                     {
@@ -105,6 +103,7 @@ public class Enemy : MonoBehaviour {
                 }
             }
         }
+        pos = movePos;
     }
 
     public static bool alarmRaised
