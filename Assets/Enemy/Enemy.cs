@@ -12,7 +12,7 @@ public class Enemy : MonoBehaviour {
 	}
 	
     //For now, sees 2 in front, two to either side + 1 diagonally
-	public bool canSeePlayer(Direction facing)
+	bool canSeePlayer(Direction facing)
     {
         int layer = 0;
         if(facing == Direction.NORTH)
@@ -34,7 +34,6 @@ public class Enemy : MonoBehaviour {
                     
                 }
             }
-            LevelManager.S.realData[pos.x, pos.y]
         }
         else if(facing == Direction.SOUTH)
         {
@@ -48,5 +47,6 @@ public class Enemy : MonoBehaviour {
         {
 
         }
+        return true;
     }
 }
