@@ -286,6 +286,11 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 114000013842543380, guid: 37b49594023251843989eec7fe36393e,
+        type: 2}
+      propertyPath: m_Text
+      value: I MUST AVENGE HARAMBE!!!
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 37b49594023251843989eec7fe36393e, type: 2}
   m_IsPrefabParent: 0
@@ -592,7 +597,7 @@ Prefab:
     - target: {fileID: 114000013507247932, guid: 46d38da308ec7ea4eb993fe5090fbc26,
         type: 2}
       propertyPath: tileProperties.Array.size
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4000012292828102, guid: 46d38da308ec7ea4eb993fe5090fbc26, type: 2}
       propertyPath: m_LocalPosition.x
@@ -635,7 +640,7 @@ Prefab:
         type: 2}
       propertyPath: tileProperties.Array.data[5].occupant
       value: 
-      objectReference: {fileID: 1000012189200200, guid: 37ec00534f2a5a240b852ca8844dfe05,
+      objectReference: {fileID: 1000010037650760, guid: 3d9c1f0cb3d88d74d8fefee614b6f782,
         type: 2}
     - target: {fileID: 114000013507247932, guid: 46d38da308ec7ea4eb993fe5090fbc26,
         type: 2}
@@ -646,7 +651,7 @@ Prefab:
     - target: {fileID: 114000013507247932, guid: 46d38da308ec7ea4eb993fe5090fbc26,
         type: 2}
       propertyPath: tileProperties.Array.data[5].asciiChar
-      value: 83
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 114000013507247932, guid: 46d38da308ec7ea4eb993fe5090fbc26,
         type: 2}
@@ -657,7 +662,7 @@ Prefab:
         type: 2}
       propertyPath: tileProperties.Array.data[6].occupant
       value: 
-      objectReference: {fileID: 1000011881379720, guid: 5fa38392327377946b274be4f4570d9c,
+      objectReference: {fileID: 1000010037650760, guid: 78ef2fd0e59949e4da92682e80a4283a,
         type: 2}
     - target: {fileID: 114000013507247932, guid: 46d38da308ec7ea4eb993fe5090fbc26,
         type: 2}
@@ -668,12 +673,30 @@ Prefab:
     - target: {fileID: 114000013507247932, guid: 46d38da308ec7ea4eb993fe5090fbc26,
         type: 2}
       propertyPath: tileProperties.Array.data[6].asciiChar
-      value: 70
+      value: 82
       objectReference: {fileID: 0}
     - target: {fileID: 114000013507247932, guid: 46d38da308ec7ea4eb993fe5090fbc26,
         type: 2}
       propertyPath: rawData
-      value: "OOOOOO\r\nOOOOOO\r\nOOOOOO\rOOOO\nOOOOOOOOOO\nOOOOOO\rOOOO\nOOOOOPOO\rOO\nOXOXXO\rOOOO\nOXOOXO\rOOOOO\nOXOOXO\rOOOO\nOXKOXO\r\nOXOOXO\n"
+      value: 'OOOOOOOO
+
+        OOPOOOOO
+
+        OOOOOOOO
+
+        OOOOOOOO
+
+        OOOFOOOO
+
+        OOOOOOOO
+
+        OOROOOOO
+
+        XXXXOOOO
+
+        OOKOOOOO
+
+        OOOOOOOO'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 46d38da308ec7ea4eb993fe5090fbc26, type: 2}
