@@ -11,6 +11,10 @@ public class Fatcat : Enemy {
 	//Sentinel looks around, doesn't move unless he sees you
 	public override void Move()
 	{
+        if (CanSeePlayer(GetDirectionFacing()))
+        {
+            alarmRaised = true;
+        }
 		if (alarmRaised)
 		{
 			ChasePlayer();

@@ -3,7 +3,6 @@ using System.Collections;
 
 public class Enemy : BaseMovement {
 
-    public int sightDistance = 2;
 	public bool turnsFirst = true;
     public static bool _alarmRaised = false;
 	
@@ -23,7 +22,6 @@ public class Enemy : BaseMovement {
 			 LevelManager.S.realData[PlayerMovement.S.pos.x, PlayerMovement.S.pos.y].visionBlock == VisionBlock.open) ;
 	}
 
-    //For now, sees 2 in front, two to either side + 1 diagonally
 	public bool CanSeePlayer(Direction dir)
     {
         if (CanSeePlayerDirectionless())
