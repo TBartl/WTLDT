@@ -170,7 +170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 724ba9fb24cc07241966842c93071e1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resetMod: 10
+  resetMod: 8.32
   speed: 1.2
 --- !u!124 &124000014118421576
 Behaviour:

@@ -28,11 +28,12 @@ public class Game_Manager : MonoBehaviour {
     }
 	IEnumerator FailLevelCoroutine()
 	{
+		Debug.Log("los");
 		levelEnding = true;
 		for (float f = 0; f < 1f; f += Time.deltaTime)
 			yield return null;
 		int scene = SceneManager.GetActiveScene().buildIndex;
-		SceneManager.LoadScene(scene, LoadSceneMode.Single);
+		SceneManager.LoadScene(scene);
 	}
 
 	public void WinLevel()
@@ -41,10 +42,11 @@ public class Game_Manager : MonoBehaviour {
 	}
 	IEnumerator WinLevelCoroutine()
 	{
+		Debug.Log("WIN");
 		levelEnding = true;
 		for (float f = 0; f < 1f; f += Time.deltaTime)
 			yield return null;
 		int scene = SceneManager.GetActiveScene().buildIndex;
-		SceneManager.LoadScene(scene + 1, LoadSceneMode.Single);
+		SceneManager.LoadScene(scene + 1);
 	}
 }
