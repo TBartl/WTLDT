@@ -52,17 +52,23 @@ public class BaseMovement : MonoBehaviour {
 
 	protected virtual void MoveIfAble(IntVector2 newPos)
 	{
-		GameObject occupant = LevelManager.S.realData[newPos.x, newPos.y].occupant;
-		if (LevelManager.S.InBounds(newPos)&& 
-			LevelManager.S.realData[newPos.x, newPos.y].passable == true && 
-			(occupant == null || (occupant != null && occupant.tag == "Collectable")))
-		{
-			Move(newPos);
-		}
-		else
-		{
-			StartCoroutine(SmoothHit(pos, newPos));
-		}
+        if (LevelManager.S.InBounds(newPos))
+        {
+            GameObject occupant = LevelManager.S.realData[newPos.x, newPos.y].occupant;
+            if (LevelManager.S.realData[newPos.x, newPos.y].passable == true &&
+                (occupant == null || (occupant != null && occupant.tag == "Collectable")))
+            {
+                Move(newPos);
+            }
+            else
+            {
+                StartCoroutine(SmoothHit(pos, newPos));
+            }
+        }
+        else
+        {
+            StartCoroutine(SmoothHit(pos, newPos));
+        }
 	}
 
 	protected IEnumerator SmoothMove(IntVector2 fromPos, IntVector2 toPos)

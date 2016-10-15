@@ -48,6 +48,10 @@ public class Wolf : Enemy {
             {
                 SetRotation(GetRotation() + 180);
             }
+            if (CanSeePlayer(GetDirectionFacing()))
+            {
+                alarmRaised = true;
+            }
         }
         else
         {
