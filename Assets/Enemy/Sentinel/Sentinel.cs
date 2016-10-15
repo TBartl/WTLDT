@@ -28,7 +28,7 @@ public class Sentinel : Enemy {
 	
 
     //Sentinel looks around, doesn't move unless he sees you
-	void Move()
+	public override void Move()
     {
         if (!alarmRaised)
         {

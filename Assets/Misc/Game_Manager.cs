@@ -17,7 +17,7 @@ public class Game_Manager : MonoBehaviour {
         //update enemies
         foreach (GameObject enemy in GameObject.FindGameObjectsWithTag("enemy"))
         {
-            //enemy.move()
+            enemy.GetComponent<Enemy>().Move();
         }
     }
     //On level complete

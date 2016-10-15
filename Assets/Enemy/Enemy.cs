@@ -9,9 +9,15 @@ public class Enemy : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        pos.x = Mathf.RoundToInt(transform.position.x);
+        pos.y = Mathf.RoundToInt(transform.position.z);
+    }
 	
-	}
-	
+    public virtual void Move()
+    {
+
+    }
+
     //For now, sees 2 in front, two to either side + 1 diagonally
 	public bool CanSeePlayer(Direction dir)
     {
