@@ -61,6 +61,18 @@ public class Bird : Enemy {
 		}
 	}
 
-
+	public override bool CanSeePlayer(Direction dir)
+	{
+		if (CanSeePlayerDirectionless())
+		{
+			if (Mathf.Abs (PlayerMovement.S.pos.x - pos.x) <= 1 && (PlayerMovement.S.pos.y == pos.y)
+				|| Mathf.Abs (PlayerMovement.S.pos.y - pos.y) <= 1 && (PlayerMovement.S.pos.x == pos.x)
+			) {
+				return true;
+			}
+			else return false;
+		}
+		else return false;       
+	}
 
 }
