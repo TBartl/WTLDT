@@ -92,6 +92,8 @@ public class LevelManager : MonoBehaviour {
 
 		// Previous tile loses reference to unit
 		realData[fromPos.x, fromPos.y].occupant = null;
+
+		SetLightOfTile(toPos, realData[toPos.x, toPos.y].light);
 	}
 
 	public void SmoothHitCheck(IntVector2 fromPos, IntVector2 toPos)

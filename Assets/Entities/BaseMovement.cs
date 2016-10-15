@@ -11,6 +11,7 @@ public class BaseMovement : MonoBehaviour {
 	{
 		pos.x = Mathf.RoundToInt(transform.position.x);
 		pos.y = Mathf.RoundToInt(transform.position.z);
+		rotation = Mathf.RoundToInt(rotation);
 	}
 
 	protected void SetRotation(int val)

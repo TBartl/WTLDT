@@ -56,8 +56,8 @@ public class PlayerMovement : BaseMovement {
 		LevelManager.S.MoveOccupant(pos, newPos);
 		StartCoroutine(SmoothMove(pos, newPos));
 		pos = newPos;
-		Game_Manager.S.OnPlayerMove();
 		PlayerVision.S.OnPlayerMove(newPos);
+		Game_Manager.S.OnPlayerMove();
 	}
 
 	bool TowardsPassable(IntVector2 newPos) {
