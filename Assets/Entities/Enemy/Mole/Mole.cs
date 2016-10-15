@@ -13,10 +13,8 @@ public class Mole : Enemy {
 
     public Direction moleDir;
     public IntVector2[] hillLocations;
-    public float yChange = 0.5f;
 
     int currentHillIndex;
-    bool outOfHole;
     StepInProcess curStep;
 
     // Use this for initialization
@@ -44,12 +42,14 @@ public class Mole : Enemy {
         {
             if (curStep == StepInProcess.Arrived)
             {
-                ChangeElevation(yChange);
+                //Animate it coming out of hole
+                //------------------------------------
                 curStep = StepInProcess.Up;
             }
             else if (curStep == StepInProcess.Up)
             {
-                ChangeElevation(-yChange);
+                //Animate it going into hole
+                //----------------------------------
                 curStep = StepInProcess.Down;
             }
             else if (curStep == StepInProcess.Down)
@@ -85,18 +85,20 @@ public class Mole : Enemy {
         }
     }
 
-    public IEnumerator ChangeElevation(float changeInY)
+    protected override void MoveIfAble(IntVector2 newPos)
     {
-        transform.position = (Vector3)pos;
-        Vector3 fromPos = (Vector3)pos;
-        Vector3 toPos = fromPos;
-        toPos.y += changeInY;
-        for (float f = 0; f < smoothMoveTime; f += Time.deltaTime)
+        if (LevelManager.S.InBounds(newPos) &&
+            LevelManager.S.realData[newPos.x, newPos.y].passable == true &&
+            (LevelManager.S.realData[newPos.x, newPos.y].occupant == null || (LevelManager.S.realData[newPos.x, newPos.y].occupant != null && LevelManager.S.realData[newPos.x, newPos.y].occupant.tag == "Collectable")))
         {
-            float percent = f / smoothMoveTime;
-            transform.position = Vector3.Lerp((Vector3)fromPos, (Vector3)toPos + Vector3.up * Mathf.Sin(percent * Mathf.PI / 2) * .5f, percent);
-            yield return null;
+            Move(newPos);
         }
-        transform.position = (Vector3)toPos;
+    }
+
+    protected override void Move(IntVector2 newPos)
+    {
+        LevelManager.S.MoveOccupant(pos, newPos);
+        transform.position = (Vector3)newPos;
+        pos = newPos;
     }
 }

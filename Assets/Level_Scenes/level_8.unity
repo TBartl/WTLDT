@@ -640,7 +640,7 @@ Prefab:
         type: 2}
       propertyPath: textFile
       value: 
-      objectReference: {fileID: 4900000, guid: 2b27c919cc9f18f44b03ecfaa4d46d9b, type: 3}
+      objectReference: {fileID: 4900000, guid: 284277681091d974698d40c8831cd747, type: 3}
     - target: {fileID: 114000013507247932, guid: 46d38da308ec7ea4eb993fe5090fbc26,
         type: 2}
       propertyPath: tileProperties.Array.data[8].prefab
