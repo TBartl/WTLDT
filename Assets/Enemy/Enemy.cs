@@ -4,7 +4,8 @@ using System.Collections;
 public class Enemy : MonoBehaviour {
 
     public int sightDistance = 2;
-    IntVector2 pos;
+    public IntVector2 pos;
+    public static bool _alarmRaised = false;
 
 	// Use this for initialization
 	void Start () {
@@ -12,41 +13,32 @@ public class Enemy : MonoBehaviour {
 	}
 	
     //For now, sees 2 in front, two to either side + 1 diagonally
-	bool canSeePlayer(Direction facing)
+	public bool CanSeePlayer(Direction dir)
     {
-        int layer = 0;
-        if(facing == Direction.NORTH)
+        if (LevelManager.S.realData[pos.x, pos.y].light == LightAmount.lit)
         {
-            
-            for(int x = 0; x < sightDistance; x++)
-            {
-                for(int y = 0; y < sightDistance - layer; y++)
-                {
-                    if (x == 0 && y == 0) continue;
-                    if(LevelManager.S.realData[pos.x + x, pos.y + y].occupant != null)
-                    {
-                        if (LevelManager.S.realData[pos.x + x, pos.y + y].occupant.tag == "Player")
-                        {
-                            return true;
-                        }
-                        
-                    }
-                    
-                }
-            }
+            if (dir == Direction.NORTH && PlayerMovement.Player.position.y >= pos.y)
+                return true;
+            else if (dir == Direction.SOUTH && PlayerMovement.Player.position.y <= pos.y)
+                return true;
+            else if (dir == Direction.EAST && PlayerMovement.Player.position.x >= pos.x)
+                return true;
+            else if (dir == Direction.WEST && PlayerMovement.Player.position.x <= pos.x)
+                return true;
+            else return false;
         }
-        else if(facing == Direction.SOUTH)
-        {
+        else return false;       
+    }
 
-        }
-        else if(facing == Direction.EAST)
+    public static bool alarmRaised
+    {
+        get
         {
-
+            return _alarmRaised;
         }
-        else if(facing == Direction.WEST)
+        set
         {
-
+            _alarmRaised = value;
         }
-        return true;
     }
 }
