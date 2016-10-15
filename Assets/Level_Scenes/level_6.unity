@@ -186,6 +186,21 @@ Prefab:
       propertyPath: Loop
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 82000012151711848, guid: 45f1f0cb250724046a60797a514e5dfa,
+        type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 148825897abab441fbfdd188e2783a5b, type: 3}
+    - target: {fileID: 82000010122068338, guid: 45f1f0cb250724046a60797a514e5dfa,
+        type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 18e60cc2a9ccd444ba8427a1060a941e, type: 3}
+    - target: {fileID: 82000010122068338, guid: 45f1f0cb250724046a60797a514e5dfa,
+        type: 2}
+      propertyPath: m_Volume
+      value: 0.666
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 45f1f0cb250724046a60797a514e5dfa, type: 2}
   m_IsPrefabParent: 0
@@ -289,7 +304,7 @@ Prefab:
     - target: {fileID: 114000013842543380, guid: 37b49594023251843989eec7fe36393e,
         type: 2}
       propertyPath: m_Text
-      value: 
+      value: Why is there a speech bubble above me?
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 37b49594023251843989eec7fe36393e, type: 2}
