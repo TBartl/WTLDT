@@ -47,9 +47,10 @@ public class PlayerMovement : MonoBehaviour {
 			movementQueue.RemoveAt(0);
 
 			IntVector2 newPos = position + GetVectorFromDirection(toDir);
-			if (LevelManager.S.InBounds(newPos) && TowardsPassable(newPos))
+			if (LevelManager.S.InBounds(newPos) && TowardsPassable(newPos) && (LevelManager.S.realData[newPos.x, newPos.y].occupant == null))
 			{
 				LevelManager.S.MoveSomething(position, newPos);
+				Game_Manager.S.OnPlayerMove();
 				PlayerVision.S.OnPlayerMove(newPos);
 				position = newPos;
 			}

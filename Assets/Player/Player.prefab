@@ -93,6 +93,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3d1796ac15fbd741b002bbcee31c74b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  children: []
 --- !u!114 &114000011003398108
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -117,7 +118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5437b634726fd714290ab20b3a30b57f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 6
+  radius: 5
 --- !u!114 &114000012788362024
 MonoBehaviour:
   m_ObjectHideFlags: 1

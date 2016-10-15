@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public enum VisionBlock
 {
-	open, shortGrass, blocked
+	open, blocked
 }
 
 public enum LightAmount {

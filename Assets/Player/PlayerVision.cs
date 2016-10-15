@@ -102,8 +102,6 @@ public class PlayerVision : MonoBehaviour {
 
 					if (LevelManager.S.realData[xReal, yReal].visionBlock == VisionBlock.open)
 						SpreadLightAroundPos(new IntVector2(xIndex, yIndex), 1);
-					else if (LevelManager.S.realData[xReal, yReal].visionBlock == VisionBlock.shortGrass)
-						SpreadLightAroundPos(new IntVector2(xIndex, yIndex), 2);
 				}
 			}
 		}

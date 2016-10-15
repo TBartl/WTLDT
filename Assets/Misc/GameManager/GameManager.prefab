@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000012292828102}
   - 114: {fileID: 114000013507247932}
+  - 114: {fileID: 114000011811484576}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -40,6 +41,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &114000011811484576
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013050856040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc46dc8346705da48b7de2f7c7b8a988, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000013507247932
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -104,7 +116,7 @@ MonoBehaviour:
     occupant: {fileID: 1000013192762668, guid: 76fabec1afd1ce14eb72ed8019bd1e29, type: 2}
     prefab: {fileID: 1000012517458186, guid: 3f9fb1e9235171d4083d5e888a0ea40a, type: 2}
     asciiChar: 80
-  - light: 2
+  - light: 0
     passable: 1
     visionBlock: 0
     occupant: {fileID: 1000011881379720, guid: 5fa38392327377946b274be4f4570d9c, type: 2}
