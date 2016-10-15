@@ -98,14 +98,13 @@ public class LevelManager : MonoBehaviour {
 
 	public void SmoothHitCheck(IntVector2 fromPos, IntVector2 toPos)
     {
-        if (InBounds(toPos))
+		if (InBounds(toPos) || InBounds(fromPos))
+			return;
+        if (realData[fromPos.x, fromPos.y].occupant && realData[fromPos.x, fromPos.y].occupant.tag == "Collectable" &&
+            realData[toPos.x, toPos.y].occupant && realData[toPos.x, toPos.y].occupant.tag == "enemy")
         {
-            if (realData[fromPos.x, fromPos.y].occupant && realData[fromPos.x, fromPos.y].occupant.tag == "Collectable" &&
-                realData[toPos.x, toPos.y].occupant && realData[toPos.x, toPos.y].occupant.tag == "enemy")
-            {
-                realData[fromPos.x, fromPos.y].occupant.GetComponent<Collectable>().Collect(toPos);
-                realData[fromPos.x, fromPos.y].occupant.GetComponent<MeshRenderer>().enabled = false;
-            }
+            realData[fromPos.x, fromPos.y].occupant.GetComponent<Collectable>().Collect(toPos);
+            realData[fromPos.x, fromPos.y].occupant.GetComponent<MeshRenderer>().enabled = false;
         }
     }
 

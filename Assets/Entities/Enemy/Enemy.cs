@@ -104,13 +104,29 @@ public class Enemy : BaseMovement {
         }
         set
         {
-			if (_alarmRaised == false && value == true)
-			{
-				AudioManager.S.StartChase();
-				SoundManager.SM.StartWhistle ();
-				Redpanel.RP.StartFlash ();
-			}
             _alarmRaised = value;
         }
     }
+
+	protected void RaiseAlarm()
+	{
+		alarmRaised = true;
+		AudioManager.S.StartChase();
+		SoundManager.SM.StartWhistle();
+		Redpanel.RP.StartFlash();
+		StartCoroutine(Hop());
+	}
+
+	IEnumerator Hop()
+	{
+		Vector3 position = this.transform.position;
+		float length = .3f;
+		for (float f = 0; f < length; f += Time.deltaTime)
+		{
+			float percent = f / length;
+			transform.position = position + .6f * Vector3.up * Mathf.Sin(percent * Mathf.PI);
+			yield return null;
+		}
+		this.transform.position = position;
+	}
 }

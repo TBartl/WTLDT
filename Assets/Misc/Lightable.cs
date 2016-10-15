@@ -24,7 +24,7 @@ public class Lightable : MonoBehaviour {
 				c.UpdateLight(l, andChildrenLight);
 			}
 		}
-
+		
 		mr.enabled = true;
 		if (l == LightAmount.black)
 		{
