@@ -21,7 +21,7 @@ public class Fatcat : Enemy {
 	{
 		if (!alarmRaised) {
 			if (CanSeePlayer (GetDirectionFacing ())) {
-				alarmRaised = true;
+				RaiseAlarm();
 			}
 		}
 		if (alarmRaised)

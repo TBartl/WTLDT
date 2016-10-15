@@ -52,6 +52,7 @@ public class LevelManager : MonoBehaviour {
 
 		size.x = rawData.IndexOf('\n');
 		size.y = (rawData.Length + 1) / (size.x + 1);
+		Debug.Log(size.y);
 		realData = new TileData[size.x, size.y];
 
 		for (int y = 0; y < size.y; y += 1)

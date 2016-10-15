@@ -39,7 +39,7 @@ public class Sentinel : Enemy {
 			SetRotation((GetRotation() + 90));
 			if (CanSeePlayer(GetDirectionFacing()))
 			{
-				alarmRaised = true;
+				RaiseAlarm();
 			}
 		}
         else
