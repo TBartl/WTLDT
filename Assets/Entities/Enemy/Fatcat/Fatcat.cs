@@ -19,10 +19,11 @@ public class Fatcat : Enemy {
 	//FatCat looks in one direction, doesn't move unless he sees you
 	public override void Move()
 	{
-        if (CanSeePlayer(GetDirectionFacing()))
-        {
-            alarmRaised = true;
-        }
+		if (!alarmRaised) {
+			if (CanSeePlayer (GetDirectionFacing ())) {
+				alarmRaised = true;
+			}
+		}
 		if (alarmRaised)
 		{
 			ChasePlayer();

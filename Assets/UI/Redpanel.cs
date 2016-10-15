@@ -4,11 +4,13 @@ using UnityEngine.UI;
 
 public class Redpanel : MonoBehaviour {
 
+	public static Redpanel RP;
 	public Image red_panel	;
 	float fadeTime = 3f;
 
 	// Use this for initialization
 	void Start () {
+		RP = this;
 		red_panel.CrossFadeAlpha (0, 0, false);
 
 		//StartCoroutine(StartFlash ());
@@ -18,9 +20,13 @@ public class Redpanel : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		//StartCoroutine (FlashRed ());
-		if (Input.GetKeyDown (KeyCode.R)) {
-			StartCoroutine(FlashRed ());
-		}
+//		if (Input.GetKeyDown (KeyCode.R)) {
+//			StartCoroutine(FlashRed ());
+//		}
+	}
+
+	public void StartFlash() {
+		StartCoroutine(FlashRed ());
 	}
 
 	public IEnumerator FlashRed() {
