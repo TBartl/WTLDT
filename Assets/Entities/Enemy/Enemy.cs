@@ -103,6 +103,10 @@ public class Enemy : BaseMovement {
         }
         set
         {
+			if (_alarmRaised == false && value == true)
+			{
+				AudioManager.S.StartChase();
+			}
             _alarmRaised = value;
         }
     }
