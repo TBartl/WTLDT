@@ -23,6 +23,7 @@ public class PlayerMovement : MonoBehaviour {
 		Player = this;
 		position.x = Mathf.RoundToInt(transform.position.x);
 		position.y = Mathf.RoundToInt(transform.position.z);
+		PlayerVision.S.OnPlayerMove(position);
 
 		movementQueue = new List<Direction>();
 	}
@@ -49,11 +50,10 @@ public class PlayerMovement : MonoBehaviour {
 			if (LevelManager.S.InBounds(newPos))
 			{
 				LevelManager.S.MoveSomething(position, newPos);
+				PlayerVision.S.OnPlayerMove(newPos);
 				position = newPos;
 			}
 		}
-
-
 	}
 
 	IntVector2 GetVectorFromDirection(Direction d)
@@ -67,5 +67,6 @@ public class PlayerMovement : MonoBehaviour {
 		else
 			return IntVector2.left;
 	}
+
 
 }

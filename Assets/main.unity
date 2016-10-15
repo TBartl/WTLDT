@@ -20,7 +20,7 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientSkyColor: {r: 0.52205884, g: 0.52205884, b: 0.52205884, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
@@ -203,7 +203,7 @@ Light:
   serializedVersion: 7
   m_Type: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.5
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -247,11 +247,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 114000013507247932, guid: 46d38da308ec7ea4eb993fe5090fbc26,
-        type: 2}
-      propertyPath: tileProperties.Array.size
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 4000012292828102, guid: 46d38da308ec7ea4eb993fe5090fbc26, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -283,96 +278,6 @@ Prefab:
     - target: {fileID: 4000012292828102, guid: 46d38da308ec7ea4eb993fe5090fbc26, type: 2}
       propertyPath: m_RootOrder
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000013507247932, guid: 46d38da308ec7ea4eb993fe5090fbc26,
-        type: 2}
-      propertyPath: tileProperties.Array.data[3].occupant
-      value: 
-      objectReference: {fileID: 1000013192762668, guid: 76fabec1afd1ce14eb72ed8019bd1e29,
-        type: 2}
-    - target: {fileID: 114000013507247932, guid: 46d38da308ec7ea4eb993fe5090fbc26,
-        type: 2}
-      propertyPath: tileProperties.Array.data[3].prefab
-      value: 
-      objectReference: {fileID: 1000012517458186, guid: 3f9fb1e9235171d4083d5e888a0ea40a,
-        type: 2}
-    - target: {fileID: 114000013507247932, guid: 46d38da308ec7ea4eb993fe5090fbc26,
-        type: 2}
-      propertyPath: tileProperties.Array.data[4].light
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000013507247932, guid: 46d38da308ec7ea4eb993fe5090fbc26,
-        type: 2}
-      propertyPath: tileProperties.Array.data[4].occupant
-      value: 
-      objectReference: {fileID: 1000011881379720, guid: 5fa38392327377946b274be4f4570d9c,
-        type: 2}
-    - target: {fileID: 114000013507247932, guid: 46d38da308ec7ea4eb993fe5090fbc26,
-        type: 2}
-      propertyPath: tileProperties.Array.data[5].light
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000013507247932, guid: 46d38da308ec7ea4eb993fe5090fbc26,
-        type: 2}
-      propertyPath: tileProperties.Array.data[5].passable
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000013507247932, guid: 46d38da308ec7ea4eb993fe5090fbc26,
-        type: 2}
-      propertyPath: tileProperties.Array.data[5].occupant
-      value: 
-      objectReference: {fileID: 1000011881379720, guid: 5fa38392327377946b274be4f4570d9c,
-        type: 2}
-    - target: {fileID: 114000013507247932, guid: 46d38da308ec7ea4eb993fe5090fbc26,
-        type: 2}
-      propertyPath: tileProperties.Array.data[5].prefab
-      value: 
-      objectReference: {fileID: 1000012517458186, guid: 3f9fb1e9235171d4083d5e888a0ea40a,
-        type: 2}
-    - target: {fileID: 114000013507247932, guid: 46d38da308ec7ea4eb993fe5090fbc26,
-        type: 2}
-      propertyPath: tileProperties.Array.data[5].asciiChar
-      value: 80
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000013507247932, guid: 46d38da308ec7ea4eb993fe5090fbc26,
-        type: 2}
-      propertyPath: tileProperties.Array.data[4].asciiChar
-      value: 75
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000013507247932, guid: 46d38da308ec7ea4eb993fe5090fbc26,
-        type: 2}
-      propertyPath: tileProperties.Array.data[2].prefab
-      value: 
-      objectReference: {fileID: 1000013947755016, guid: 0e004052f52486b4f88b189ea1ca4ee2,
-        type: 2}
-    - target: {fileID: 114000013507247932, guid: 46d38da308ec7ea4eb993fe5090fbc26,
-        type: 2}
-      propertyPath: rawData
-      value: 'OOOOOOO
-
-        OOOOOOO
-
-        OOOOOOO
-
-        OOOPOOO
-
-        OOGOOOO
-
-        OOGOOOO
-
-        OOGOOOO
-
-        OOOOGGO
-
-        OOOOOOO
-
-        OOXGXOO
-
-        OOXKXOO
-
-        OOXXXOO
-
-        OOOOOOO'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 46d38da308ec7ea4eb993fe5090fbc26, type: 2}

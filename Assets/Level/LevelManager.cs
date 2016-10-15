@@ -2,8 +2,13 @@
 using System.Collections;
 using System.Collections.Generic;
 
+public enum VisionBlock
+{
+	open, shortGrass, blocked
+}
+
 public enum LightAmount {
-	black, fogOfWar, revealed
+	black, revealed, litOutskirts, lit 
 }
 
 
@@ -12,6 +17,7 @@ public struct TileData
 {
 	public LightAmount light;
 	public bool passable;
+	public VisionBlock visionBlock;
 	public GameObject occupant;
 
 	public GameObject prefab;
@@ -73,11 +79,10 @@ public class LevelManager : MonoBehaviour {
 	// Move unit by one block. This handles tile properties and moves the gameobject. Used for both player and enemies.
 	public void MoveSomething(IntVector2 fromPos, IntVector2 toPos) {
 		// Update the unit's gameobject's position
-		Vector3 destination = (Vector3)toPos;
 
 		GameObject unit = realData[fromPos.x, fromPos.y].occupant;
 
-		realData[fromPos.x, fromPos.y].occupant.transform.position = destination;
+		StartCoroutine(SmoothMoveOccupant(fromPos, toPos));
 
 		// New tile gains reference to unit
 		realData[toPos.x, toPos.y].occupant = unit;
@@ -86,8 +91,32 @@ public class LevelManager : MonoBehaviour {
 		realData[fromPos.x, fromPos.y].occupant = null;
 	}
 
+	IEnumerator SmoothMoveOccupant(IntVector2 fromPos, IntVector2 toPos)
+	{
+		GameObject g = realData[fromPos.x, fromPos.y].occupant;
+		g.transform.position = (Vector3)fromPos;
+		float length = .1f;
+		for (float f = 0; f < length; f += Time.deltaTime)
+		{
+			float percent = f / length;
+			g.transform.position = Vector3.Lerp((Vector3)fromPos, (Vector3)toPos, percent);
+			yield return null;
+		}
+		g.transform.position = (Vector3)toPos;
+	}
+
 	public bool InBounds (IntVector2 pos)
 	{
 		return (pos.x >= 0 && pos.y >= 0 && pos.x < size.x && pos.y < size.y);
 	}
+
+
+	public void SetLightOfTile(IntVector2 pos, LightAmount amount)
+	{
+		realData[pos.x, pos.y].light = amount;
+		realData[pos.x, pos.y].prefab.GetComponent<Lightable>().UpdateLight(amount, true);
+		if (realData[pos.x, pos.y].occupant)
+			realData[pos.x, pos.y].occupant.GetComponent<Lightable>().UpdateLight(amount, true);
+	}
+
 }
