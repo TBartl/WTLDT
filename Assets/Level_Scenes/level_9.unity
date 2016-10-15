@@ -520,7 +520,7 @@ Prefab:
     - target: {fileID: 114000013507247932, guid: 46d38da308ec7ea4eb993fe5090fbc26,
         type: 2}
       propertyPath: tileProperties.Array.size
-      value: 15
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 4000012292828102, guid: 46d38da308ec7ea4eb993fe5090fbc26, type: 2}
       propertyPath: m_LocalPosition.x
@@ -770,7 +770,7 @@ Prefab:
         type: 2}
       propertyPath: tileProperties.Array.data[13].occupant
       value: 
-      objectReference: {fileID: 1000010801755632, guid: c7102eeb45f1fac4085c1ab84e14a4c8,
+      objectReference: {fileID: 1000010801755632, guid: 42c0cf5b76b1c41b7bc1f53425a8a93f,
         type: 2}
     - target: {fileID: 114000013507247932, guid: 46d38da308ec7ea4eb993fe5090fbc26,
         type: 2}
@@ -804,6 +804,28 @@ Prefab:
         type: 2}
       propertyPath: tileProperties.Array.data[14].asciiChar
       value: 89
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013507247932, guid: 46d38da308ec7ea4eb993fe5090fbc26,
+        type: 2}
+      propertyPath: tileProperties.Array.data[15].passable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013507247932, guid: 46d38da308ec7ea4eb993fe5090fbc26,
+        type: 2}
+      propertyPath: tileProperties.Array.data[15].occupant
+      value: 
+      objectReference: {fileID: 1000010801755632, guid: 9da4a5fee99d84bf69db1d57a829aae1,
+        type: 2}
+    - target: {fileID: 114000013507247932, guid: 46d38da308ec7ea4eb993fe5090fbc26,
+        type: 2}
+      propertyPath: tileProperties.Array.data[15].prefab
+      value: 
+      objectReference: {fileID: 1000012517458186, guid: 3f9fb1e9235171d4083d5e888a0ea40a,
+        type: 2}
+    - target: {fileID: 114000013507247932, guid: 46d38da308ec7ea4eb993fe5090fbc26,
+        type: 2}
+      propertyPath: tileProperties.Array.data[15].asciiChar
+      value: 81
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 46d38da308ec7ea4eb993fe5090fbc26, type: 2}
