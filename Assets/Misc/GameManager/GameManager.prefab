@@ -140,6 +140,6 @@ MonoBehaviour:
   - light: 0
     passable: 1
     visionBlock: 0
-    occupant: {fileID: 1000010037650760, guid: 71f2d24decdca664caf1782c5cbc565d, type: 2}
+    occupant: {fileID: 1000011881379720, guid: 5fa38392327377946b274be4f4570d9c, type: 2}
     prefab: {fileID: 1000012517458186, guid: 3f9fb1e9235171d4083d5e888a0ea40a, type: 2}
     asciiChar: 70
