@@ -68,11 +68,8 @@ public class PlayerMovement : MonoBehaviour {
 			return IntVector2.left;
 	}
 
-<<<<<<< HEAD
-=======
+
 	bool TowardsPassable(IntVector2 newPos) {
 		return LevelManager.S.realData [newPos.x, newPos.y].passable;
 	}
->>>>>>> origin/master
-
 }
