@@ -39,7 +39,7 @@ public class PlayerMovement : BaseMovement {
 		else if (Input.GetKeyDown(KeyCode.A))
 			movementQueue.Add(Direction.WEST);
 
-		if (movementQueue.Count > 0)
+		if (movementQueue.Count > 0 && Game_Manager.S.levelEnding == false)
 		{
 			Direction toDir = movementQueue[0];
 			movementQueue.RemoveAt(0);

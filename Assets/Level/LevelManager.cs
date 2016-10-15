@@ -80,6 +80,13 @@ public class LevelManager : MonoBehaviour {
 	public void MoveOccupant(IntVector2 fromPos, IntVector2 toPos) {
 		// Update the unit's gameobject's position
 
+		// Try collecting occupant
+		if (realData[toPos.x, toPos.y].occupant && realData[toPos.x, toPos.y].occupant.tag == "Collectable")
+		{
+			realData[toPos.x, toPos.y].occupant.GetComponent<Collectable>().Collect(toPos);
+			realData[toPos.x, toPos.y].occupant.GetComponent<MeshRenderer>().enabled = false;
+		}
+
 		// New tile gains reference to unit
 		realData[toPos.x, toPos.y].occupant = realData[fromPos.x, fromPos.y].occupant;
 

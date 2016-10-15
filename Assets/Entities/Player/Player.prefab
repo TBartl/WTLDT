@@ -26,9 +26,10 @@ GameObject:
   - 114: {fileID: 114000011003398108}
   - 114: {fileID: 114000010561362422}
   - 114: {fileID: 114000012484629618}
+  - 114: {fileID: 114000011501581586}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -107,6 +108,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraDist: 8
   cameraRotation: 60
+--- !u!114 &114000011501581586
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013192762668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cfacec214abb6d45bf970ae8f2f6e19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bloodFountain: {fileID: 1000010948841500, guid: cd2328bfc981e6a4e88b04b71fc9d911,
+    type: 2}
 --- !u!114 &114000012484629618
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -131,7 +145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f48b0f6b05e71f48bf0b533aca04a0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  position:
+  pos:
     x: 0
     y: 0
 --- !u!135 &135000013301218526

@@ -51,9 +51,10 @@ public class BaseMovement : MonoBehaviour {
 
 	protected virtual void MoveIfAble(IntVector2 newPos)
 	{
+		GameObject occupant = LevelManager.S.realData[newPos.x, newPos.y].occupant;
 		if (LevelManager.S.InBounds(newPos)&& 
 			LevelManager.S.realData[newPos.x, newPos.y].passable == true && 
-			LevelManager.S.realData[newPos.x, newPos.y].occupant == null)
+			(occupant == null || (occupant != null && occupant.tag == "Collectable")))
 		{
 			Move(newPos);
 		}
