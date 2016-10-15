@@ -76,17 +76,11 @@ public class LevelManager : MonoBehaviour {
 					if (c == tileProperties[i].asciiChar)
 					{
 						realData[x, y] = tileProperties[i];
-<<<<<<< HEAD
 						realData [x, y].prefab = (GameObject)Instantiate (tileProperties [i].prefab, (Vector3)new IntVector2 (x, y), Quaternion.identity);
 
 						if (tileProperties [i].occupant != null) {
 							realData [x, y].occupant = (GameObject)Instantiate (tileProperties [i].occupant, (Vector3)new IntVector2 (x, y), Quaternion.identity);
 						}
-=======
-						realData[x, y].prefab = (GameObject)Instantiate(tileProperties[i].prefab, (Vector3)new IntVector2(x, y), tileProperties[i].prefab.transform.rotation);
-						if (tileProperties[i].occupant != null)
-							realData[x, y].occupant = (GameObject)Instantiate(tileProperties[i].occupant, (Vector3)new IntVector2(x, y), tileProperties[i].occupant.transform.rotation);
->>>>>>> origin/master
 					}
 				}
 
