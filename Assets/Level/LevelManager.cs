@@ -74,15 +74,27 @@ public class LevelManager : MonoBehaviour {
 	public void MoveUnitByOne(IntVector2 fromPos, IntVector2 toPos) {
 
 		// Update the unit's gameobject's position
+<<<<<<< Updated upstream
 		Vector3 destination = (Vector3)toPos;
 		realData [toPos.x, toPos.y].occupant.transform.position = destination;
 
+=======
+//		Vector3 destination = Vector3(toPos);
+//		realData [toPos.x, toPos.y].occupant.transform.position = destination;
+		GameObject unit = realData[fromPos.x, fromPos.y].occupant;
+>>>>>>> Stashed changes
 		// New tile gains reference to unit
-		realData[toPos.x, toPos.y].occupant = realData[fromPos.x, fromPos.y].occupant;
+		realData[toPos.x, toPos.y].occupant = unit;
 
 		// Previous tile loses reference to unit
 		realData[fromPos.x, fromPos.y].occupant = null;
 
+		UpdateUnitPosition (unit, toPos);
+	}
+
+	public void UpdateUnitPosition (GameObject unit, IntVector2 new_position) {
+		Vector3 destination_position = new Vector3 (new_position.x, 0, new_position.y);
+		unit.transform.position = destination_position;
 	}
 
 }
