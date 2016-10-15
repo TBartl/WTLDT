@@ -345,6 +345,35 @@ Prefab:
       value: 
       objectReference: {fileID: 1000013947755016, guid: 0e004052f52486b4f88b189ea1ca4ee2,
         type: 2}
+    - target: {fileID: 114000013507247932, guid: 46d38da308ec7ea4eb993fe5090fbc26,
+        type: 2}
+      propertyPath: rawData
+      value: 'OOOOOOO
+
+        OOOOOOO
+
+        OOOOOOO
+
+        OOOPOOO
+
+        OOGOOOO
+
+        OOGOOOO
+
+        OOGOOOO
+
+        OOOOGGO
+
+        OOOOOOO
+
+        OOXGXOO
+
+        OOXKXOO
+
+        OOXXXOO
+
+        OOOOOOO'
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 46d38da308ec7ea4eb993fe5090fbc26, type: 2}
   m_IsPrefabParent: 0

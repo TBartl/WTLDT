@@ -88,6 +88,6 @@ public class LevelManager : MonoBehaviour {
 
 	public bool InBounds (IntVector2 pos)
 	{
-		return (pos.x >= 0 && pos.y >= 0 && pos.x < size.x && pos.y <= size.y);
+		return (pos.x >= 0 && pos.y >= 0 && pos.x < size.x && pos.y < size.y);
 	}
 }
