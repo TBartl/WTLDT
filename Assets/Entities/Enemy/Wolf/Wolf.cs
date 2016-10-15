@@ -50,7 +50,7 @@ public class Wolf : Enemy {
             }
             if (CanSeePlayer(GetDirectionFacing()))
             {
-                alarmRaised = true;
+                RaiseAlarm();
             }
         }
         else
