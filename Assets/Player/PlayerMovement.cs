@@ -10,16 +10,21 @@ enum Direction {
 
 public class PlayerMovement : MonoBehaviour {
 
-	public PlayerMovement Player;
+	public static PlayerMovement Player;
 	public TileData onTile;
+	public IntVector2 position;
 	int movement_buffer;
+
 
 	// Use this for initialization
 	void Start () {
 		Player = this;
+		position = new IntVector2 (0, 0);
+		// Initialize first tile
+		onTile = LevelManager.S.realData [position.x, position.y];
+		LevelManager.S.realData [position.x, position.y].occupant = gameObject;
 		movement_buffer = 0;
 
-		// Initialize first tile
 	}
 	// Update is called once per frame
 	void Update () {
@@ -30,32 +35,26 @@ public class PlayerMovement : MonoBehaviour {
 
 		// Move Up
 		if (Input.GetKeyDown (KeyCode.W)) {
-			MovePlayerByOne (Direction.NORTH);
+			IntVector2 newPosition = position += new IntVector2 (0, 1);
+			LevelManager.S.MoveUnitByOne (position, newPosition);
 		} 
 		// Move Down
 		else if (Input.GetKeyDown (KeyCode.S)) {
-			MovePlayerByOne (Direction.SOUTH);
+			IntVector2 newPosition = position += new IntVector2 (0, -1);
+			LevelManager.S.MoveUnitByOne (position, newPosition);
 		}
 		// Move Right
 		else if (Input.GetKeyDown (KeyCode.D)) {
-			MovePlayerByOne (Direction.EAST);
+			IntVector2 newPosition = position += new IntVector2 (1, 0);
+			LevelManager.S.MoveUnitByOne (position, newPosition);
 		}
 		// Move Left
 		else if (Input.GetKeyDown (KeyCode.A)) {
-			MovePlayerByOne (Direction.WEST);
+			IntVector2 newPosition = position += new IntVector2 (-1, 0);
+			LevelManager.S.MoveUnitByOne (position, newPosition);
 		}
 
 
 	}
 
-	void 
-	
-	// Move player by one block. This handles tile properties.
-	void MovePlayerByOne(Direction moving_direction) {
-
-		// Previous tile loses reference to player
-
-		// New tile gains reference to player
-
-	}
 }
