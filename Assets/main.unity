@@ -589,11 +589,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 114000013507247932, guid: 46d38da308ec7ea4eb993fe5090fbc26,
-        type: 2}
-      propertyPath: tileProperties.Array.size
-      value: 7
-      objectReference: {fileID: 0}
     - target: {fileID: 4000012292828102, guid: 46d38da308ec7ea4eb993fe5090fbc26, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -625,87 +620,6 @@ Prefab:
     - target: {fileID: 4000012292828102, guid: 46d38da308ec7ea4eb993fe5090fbc26, type: 2}
       propertyPath: m_RootOrder
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000013507247932, guid: 46d38da308ec7ea4eb993fe5090fbc26,
-        type: 2}
-      propertyPath: tileProperties.Array.data[5].passable
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000013507247932, guid: 46d38da308ec7ea4eb993fe5090fbc26,
-        type: 2}
-      propertyPath: tileProperties.Array.data[5].occupant
-      value: 
-      objectReference: {fileID: 1000012189200200, guid: 37ec00534f2a5a240b852ca8844dfe05,
-        type: 2}
-    - target: {fileID: 114000013507247932, guid: 46d38da308ec7ea4eb993fe5090fbc26,
-        type: 2}
-      propertyPath: tileProperties.Array.data[5].prefab
-      value: 
-      objectReference: {fileID: 1000012517458186, guid: 3f9fb1e9235171d4083d5e888a0ea40a,
-        type: 2}
-    - target: {fileID: 114000013507247932, guid: 46d38da308ec7ea4eb993fe5090fbc26,
-        type: 2}
-      propertyPath: tileProperties.Array.data[5].asciiChar
-      value: 83
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000013507247932, guid: 46d38da308ec7ea4eb993fe5090fbc26,
-        type: 2}
-      propertyPath: tileProperties.Array.data[6].passable
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000013507247932, guid: 46d38da308ec7ea4eb993fe5090fbc26,
-        type: 2}
-      propertyPath: tileProperties.Array.data[6].occupant
-      value: 
-      objectReference: {fileID: 1000011881379720, guid: 5fa38392327377946b274be4f4570d9c,
-        type: 2}
-    - target: {fileID: 114000013507247932, guid: 46d38da308ec7ea4eb993fe5090fbc26,
-        type: 2}
-      propertyPath: tileProperties.Array.data[6].prefab
-      value: 
-      objectReference: {fileID: 1000012517458186, guid: 3f9fb1e9235171d4083d5e888a0ea40a,
-        type: 2}
-    - target: {fileID: 114000013507247932, guid: 46d38da308ec7ea4eb993fe5090fbc26,
-        type: 2}
-      propertyPath: tileProperties.Array.data[6].asciiChar
-      value: 70
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000013507247932, guid: 46d38da308ec7ea4eb993fe5090fbc26,
-        type: 2}
-      propertyPath: rawData
-      value: 'OOOOOOO
-
-        OOOOOOO
-
-        OOOOOOO
-
-        OOOPOOO
-
-        OOGOOOO
-
-        OOGOOOO
-
-        OOGOOOO
-
-        OOOOGGO
-
-        OOOOOSO
-
-        OOGOOOO
-
-        OOGOOOO
-
-        OGGGGOO
-
-        SOOOOOO
-
-        OOXGXOO
-
-        OOXKXOO
-
-        OOXXXOO
-
-        OSOOOOO'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 46d38da308ec7ea4eb993fe5090fbc26, type: 2}

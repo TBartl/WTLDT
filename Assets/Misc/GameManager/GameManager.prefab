@@ -52,6 +52,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc46dc8346705da48b7de2f7c7b8a988, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelEnding: 0
 --- !u!114 &114000013507247932
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -65,7 +66,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rawData: 'OOOOOOO
 
-    OOOOOKO
+    OOOOOOO
 
     OOOOOOO
 
@@ -79,7 +80,15 @@ MonoBehaviour:
 
     OOOOGGO
 
-    KOOOOKO
+    OOOOOSO
+
+    OOGOOOO
+
+    OOGOOOO
+
+    OGGGGOO
+
+    SOOOOOO
 
     OOXGXOO
 
@@ -87,7 +96,7 @@ MonoBehaviour:
 
     OOXXXOO
 
-    OKOOOOO'
+    OSOOOOO'
   size:
     x: 0
     y: 0
@@ -122,3 +131,15 @@ MonoBehaviour:
     occupant: {fileID: 1000011881379720, guid: 5fa38392327377946b274be4f4570d9c, type: 2}
     prefab: {fileID: 1000012517458186, guid: 3f9fb1e9235171d4083d5e888a0ea40a, type: 2}
     asciiChar: 75
+  - light: 0
+    passable: 1
+    visionBlock: 0
+    occupant: {fileID: 1000012189200200, guid: 37ec00534f2a5a240b852ca8844dfe05, type: 2}
+    prefab: {fileID: 1000012517458186, guid: 3f9fb1e9235171d4083d5e888a0ea40a, type: 2}
+    asciiChar: 83
+  - light: 0
+    passable: 1
+    visionBlock: 0
+    occupant: {fileID: 1000010037650760, guid: 71f2d24decdca664caf1782c5cbc565d, type: 2}
+    prefab: {fileID: 1000012517458186, guid: 3f9fb1e9235171d4083d5e888a0ea40a, type: 2}
+    asciiChar: 70
