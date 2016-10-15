@@ -77,12 +77,22 @@ public class LevelManager : MonoBehaviour {
 		Vector3 destination = (Vector3)toPos;
 		realData [toPos.x, toPos.y].occupant.transform.position = destination;
 
+//		Vector3 destination = Vector3(toPos);
+//		realData [toPos.x, toPos.y].occupant.transform.position = destination;
+		GameObject unit = realData[fromPos.x, fromPos.y].occupant;
+
 		// New tile gains reference to unit
-		realData[toPos.x, toPos.y].occupant = realData[fromPos.x, fromPos.y].occupant;
+		realData[toPos.x, toPos.y].occupant = unit;
 
 		// Previous tile loses reference to unit
 		realData[fromPos.x, fromPos.y].occupant = null;
 
+		UpdateUnitPosition (unit, toPos);
+	}
+
+	public void UpdateUnitPosition (GameObject unit, IntVector2 new_position) {
+		Vector3 destination_position = new Vector3 (new_position.x, 0, new_position.y);
+		unit.transform.position = destination_position;
 	}
 
 }
