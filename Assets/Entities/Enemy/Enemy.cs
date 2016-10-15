@@ -23,7 +23,7 @@ public class Enemy : BaseMovement {
 			 LevelManager.S.realData[PlayerMovement.S.pos.x, PlayerMovement.S.pos.y].visionBlock == VisionBlock.open) ;
 	}
 
-	public bool CanSeePlayer(Direction dir)
+	public virtual bool CanSeePlayer(Direction dir)
     {
         if (CanSeePlayerDirectionless())
         {

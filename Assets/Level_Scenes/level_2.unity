@@ -289,7 +289,7 @@ Prefab:
     - target: {fileID: 114000013842543380, guid: 37b49594023251843989eec7fe36393e,
         type: 2}
       propertyPath: m_Text
-      value: Fat Cats do not change direction and only move if they spot you.
+      value: Uh oh. Guards. Let's sneak around. Wouldn't want them to hop on me.
       objectReference: {fileID: 0}
     - target: {fileID: 114000013842543380, guid: 37b49594023251843989eec7fe36393e,
         type: 2}
