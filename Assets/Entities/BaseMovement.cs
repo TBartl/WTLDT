@@ -77,6 +77,7 @@ public class BaseMovement : MonoBehaviour {
 			yield return null;
 		}
 		transform.position = (Vector3)toPos;
+        
 	}
 
 	protected IEnumerator SmoothHit(IntVector2 fromPos, IntVector2 toPos)
@@ -95,7 +96,8 @@ public class BaseMovement : MonoBehaviour {
 			yield return null;
 		}
 		transform.position = (Vector3)fromPos;
-	}
+        LevelManager.S.SmoothHitCheck(fromPos, toPos);
+    }
 
 	
 
