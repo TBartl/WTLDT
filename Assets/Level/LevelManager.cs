@@ -59,10 +59,10 @@ public class LevelManager : MonoBehaviour {
 				{
 					if (c == tileProperties[i].asciiChar)
 					{
-						Instantiate(tileProperties[i].prefab, (Vector3)new IntVector2(x, y), Quaternion.identity);
-						if (tileProperties[i].occupant != null)
-							Instantiate(tileProperties[i].occupant, (Vector3)new IntVector2(x, y), Quaternion.identity);
 						realData[x, y] = tileProperties[i];
+						realData[x, y].prefab = (GameObject)Instantiate(tileProperties[i].prefab, (Vector3)new IntVector2(x, y), Quaternion.identity);
+						if (tileProperties[i].occupant != null)
+							realData[x, y].occupant = (GameObject)Instantiate(tileProperties[i].occupant, (Vector3)new IntVector2(x, y), Quaternion.identity);
 					}
 				}
 
@@ -71,28 +71,23 @@ public class LevelManager : MonoBehaviour {
 	}
 
 	// Move unit by one block. This handles tile properties and moves the gameobject. Used for both player and enemies.
-	public void MoveUnitByOne(IntVector2 fromPos, IntVector2 toPos) {
-
+	public void MoveSomething(IntVector2 fromPos, IntVector2 toPos) {
 		// Update the unit's gameobject's position
 		Vector3 destination = (Vector3)toPos;
-		realData [toPos.x, toPos.y].occupant.transform.position = destination;
 
-//		Vector3 destination = Vector3(toPos);
-//		realData [toPos.x, toPos.y].occupant.transform.position = destination;
 		GameObject unit = realData[fromPos.x, fromPos.y].occupant;
+
+		realData[fromPos.x, fromPos.y].occupant.transform.position = destination;
 
 		// New tile gains reference to unit
 		realData[toPos.x, toPos.y].occupant = unit;
 
 		// Previous tile loses reference to unit
 		realData[fromPos.x, fromPos.y].occupant = null;
-
-		UpdateUnitPosition (unit, toPos);
 	}
 
-	public void UpdateUnitPosition (GameObject unit, IntVector2 new_position) {
-		Vector3 destination_position = new Vector3 (new_position.x, 0, new_position.y);
-		unit.transform.position = destination_position;
+	public bool InBounds (IntVector2 pos)
+	{
+		return (pos.x >= 0 && pos.y >= 0 && pos.x < size.x && pos.y <= size.y);
 	}
-
 }

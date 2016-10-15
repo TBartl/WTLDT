@@ -1,7 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
-enum Direction {
+[System.Serializable]
+public enum Direction {
 	NORTH,
 	EAST,
 	SOUTH,
@@ -11,58 +13,59 @@ enum Direction {
 public class PlayerMovement : MonoBehaviour {
 
 	public static PlayerMovement Player;
-	public TileData onTile;
 	public IntVector2 position;
-	int movement_buffer;
+
+	List<Direction> movementQueue;
 
 
 	// Use this for initialization
 	void Start () {
 		Player = this;
-		position.x = (int)(gameObject.transform.position.x);
-		position.y = (int)(gameObject.transform.position.z);
-		// Initialize first tile
-		onTile = LevelManager.S.realData [position.x, position.y];
-		LevelManager.S.realData [position.x, position.y].occupant = gameObject;
-		movement_buffer = 0;
+		position.x = Mathf.RoundToInt(transform.position.x);
+		position.y = Mathf.RoundToInt(transform.position.z);
 
+		movementQueue = new List<Direction>();
 	}
 	// Update is called once per frame
 	void Update () {
-		this.transform.position += Vector3.left * Time.deltaTime;
-		
-
-
-
 
 		// Detect if there is any input from the player.
 
-		// Move Up
-		if (Input.GetKeyDown (KeyCode.W)) {
-			IntVector2 newPosition = position += new IntVector2 (0, 1);
-			LevelManager.S.MoveUnitByOne (position, newPosition);
-			Game_Manager.GM.on_player_move ();
-		} 
-		// Move Down
-		else if (Input.GetKeyDown (KeyCode.S)) {
-			IntVector2 newPosition = position += new IntVector2 (0, -1);
-			LevelManager.S.MoveUnitByOne (position, newPosition);
-			Game_Manager.GM.on_player_move ();
-		}
-		// Move Right
-		else if (Input.GetKeyDown (KeyCode.D)) {
-			IntVector2 newPosition = position += new IntVector2 (1, 0);
-			LevelManager.S.MoveUnitByOne (position, newPosition);
-			Game_Manager.GM.on_player_move ();
-		}
-		// Move Left
-		else if (Input.GetKeyDown (KeyCode.A)) {
-			IntVector2 newPosition = position += new IntVector2 (-1, 0);
-			LevelManager.S.MoveUnitByOne (position, newPosition);
-			Game_Manager.GM.on_player_move ();
+		if (Input.GetKeyDown(KeyCode.W))
+			movementQueue.Add(Direction.NORTH);
+		else if (Input.GetKeyDown(KeyCode.D))
+			movementQueue.Add(Direction.EAST);
+		else if (Input.GetKeyDown(KeyCode.S))
+			movementQueue.Add(Direction.SOUTH);
+		else if (Input.GetKeyDown(KeyCode.A))
+			movementQueue.Add(Direction.WEST);
+
+		if (movementQueue.Count > 0)
+		{
+			Direction toDir = movementQueue[0];
+			movementQueue.RemoveAt(0);
+
+			IntVector2 newPos = position + GetVectorFromDirection(toDir);
+			if (LevelManager.S.InBounds(newPos))
+			{
+				LevelManager.S.MoveSomething(position, newPos);
+				position = newPos;
+			}
 		}
 
 
+	}
+
+	IntVector2 GetVectorFromDirection(Direction d)
+	{
+		if (d == Direction.NORTH)
+			return IntVector2.up;
+		if (d == Direction.EAST)
+			return IntVector2.right;
+		if (d == Direction.SOUTH)
+			return IntVector2.down;
+		else
+			return IntVector2.left;
 	}
 
 }
