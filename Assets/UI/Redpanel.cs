@@ -9,7 +9,7 @@ public class Redpanel : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		StartCoroutine(StartFlash ());
+		//StartCoroutine(StartFlash ());
 	}
 	
 	// Update is called once per frame
@@ -18,17 +18,16 @@ public class Redpanel : MonoBehaviour {
 
 	}
 
-	public IEnumerable StartFlash() {
-		while (true) {
-			yield return red_panel.CrossFadeAlpha (0.0f, 1.0f, false);
-			yield return red_panel.CrossFadeAlpha (1.0f, 1.0f, false);
-			//yield return StartCoroutine (FlashRed ());
-		}
-	}
-
-	public IEnumerator FlashRed() {
-		
-//		yield return red_panel.CrossFadeAlpha (0.0f, 1.0f, false);
-//		yield return red_panel.CrossFadeAlpha (1.0f, 1.0f, false);
-	}
+//	public IEnumerable StartFlash() {
+//		while (true) {
+//			yield return StartCoroutine (FlashRed ());
+//		}
+//	}
+//
+//	public IEnumerator FlashRed() {
+//		
+//		red_panel.CrossFadeAlpha (0.0f, 1.0f, false);
+//		yield return WaitForSeconds (0.5f);
+//		red_panel.CrossFadeAlpha (1.0f, 1.0f, false);
+//	}
 }
