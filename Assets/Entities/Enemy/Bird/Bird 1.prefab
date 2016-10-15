@@ -24,7 +24,7 @@ GameObject:
   - 114: {fileID: 114000011224283514}
   - 114: {fileID: 114000013434807210}
   m_Layer: 0
-  m_Name: King
+  m_Name: Bird 1
   m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
