@@ -7,7 +7,7 @@ public class KingCollect : Collectable
 
 	public override void Collect(IntVector2 pos)
 	{
-		Game_Manager.S.FailLevel();
+		Game_Manager.S.WinLevel();
 		SoundManager.SM.StartStab ();
 		Instantiate(bloodFountain, (Vector3)pos, Quaternion.identity);
 	}

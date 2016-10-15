@@ -24,7 +24,7 @@ public class Fatcat : Enemy {
 				RaiseAlarm();
 			}
 		}
-		if (alarmRaised)
+		else
 		{
 			ChasePlayer();
 		}
