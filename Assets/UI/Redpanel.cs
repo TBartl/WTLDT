@@ -9,25 +9,30 @@ public class Redpanel : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		red_panel.CrossFadeAlpha (0, 0, false);
+
 		//StartCoroutine(StartFlash ());
+		//StartFlash();
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 		//StartCoroutine (FlashRed ());
-
+		if (Input.GetKeyDown (KeyCode.R)) {
+			StartCoroutine(FlashRed ());
+		}
 	}
 
-//	public IEnumerable StartFlash() {
-//		while (true) {
-//			yield return StartCoroutine (FlashRed ());
-//		}
-//	}
-//
-//	public IEnumerator FlashRed() {
-//		
-//		red_panel.CrossFadeAlpha (0.0f, 1.0f, false);
-//		yield return WaitForSeconds (0.5f);
-//		red_panel.CrossFadeAlpha (1.0f, 1.0f, false);
-//	}
+	public IEnumerator FlashRed() {
+		while (true) {
+			// Fade in
+			red_panel.CrossFadeAlpha (1.0f, 1.0f, false);
+			yield return new WaitForSeconds (1.5f);
+
+			// Fade out
+			red_panel.CrossFadeAlpha (0.0f, 1.0f, false);
+			yield return new WaitForSeconds (1.5f);
+
+		}
+	}
 }
