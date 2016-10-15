@@ -27,13 +27,13 @@ public class Enemy : BaseMovement {
     {
         if (CanSeePlayerDirectionless())
         {
-            if (dir == Direction.NORTH && PlayerMovement.S.pos.y >= pos.y)
+            if (dir == Direction.NORTH && PlayerMovement.S.pos.y > pos.y)
                 return true;
-            else if (dir == Direction.SOUTH && PlayerMovement.S.pos.y <= pos.y)
+            else if (dir == Direction.SOUTH && PlayerMovement.S.pos.y < pos.y)
                 return true;
-            else if (dir == Direction.EAST && PlayerMovement.S.pos.x >= pos.x)
+            else if (dir == Direction.EAST && PlayerMovement.S.pos.x > pos.x)
                 return true;
-            else if (dir == Direction.WEST && PlayerMovement.S.pos.x <= pos.x)
+            else if (dir == Direction.WEST && PlayerMovement.S.pos.x < pos.x)
                 return true;
             else return false;
         }

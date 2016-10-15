@@ -289,7 +289,17 @@ Prefab:
     - target: {fileID: 114000013842543380, guid: 37b49594023251843989eec7fe36393e,
         type: 2}
       propertyPath: m_Text
-      value: I MUST AVENGE HARAMBE!!!
+      value: Fat Cats do not change direction and only move if they spot you.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013842543380, guid: 37b49594023251843989eec7fe36393e,
+        type: 2}
+      propertyPath: m_FontData.m_MaxSize
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010937378772, guid: 37b49594023251843989eec7fe36393e,
+        type: 2}
+      propertyPath: time
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 37b49594023251843989eec7fe36393e, type: 2}
