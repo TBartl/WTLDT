@@ -20,7 +20,7 @@ public class Enemy : BaseMovement {
 	public bool CanSeePlayerDirectionless()
 	{
 		return (LevelManager.S.realData[pos.x, pos.y].light == LightAmount.lit &&
-			 LevelManager.S.realData[PlayerMovement.S.pos.x, PlayerMovement.S.pos.x].visionBlock == VisionBlock.open) ;
+			 LevelManager.S.realData[PlayerMovement.S.pos.x, PlayerMovement.S.pos.y].visionBlock == VisionBlock.open) ;
 	}
 
     //For now, sees 2 in front, two to either side + 1 diagonally
