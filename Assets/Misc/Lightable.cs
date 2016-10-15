@@ -25,8 +25,12 @@ public class Lightable : MonoBehaviour {
 			}
 		}
 
+		mr.enabled = true;
 		if (l == LightAmount.black)
+		{
 			mr.material.color = Color.black;
+			mr.enabled = false;
+		}
 		else if (l == LightAmount.revealed)
 			mr.material.color = originalColor * .2f;
 		else if (l == LightAmount.litOutskirts)
