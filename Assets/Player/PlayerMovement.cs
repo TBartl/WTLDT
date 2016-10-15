@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-enum Direction {
+public enum Direction {
 	NORTH,
 	EAST,
 	SOUTH,
@@ -22,16 +22,10 @@ public class PlayerMovement : MonoBehaviour {
 		position.y = (int)(gameObject.transform.position.z);
 		// Initialize first tile
 		onTile = LevelManager.S.realData [position.x, position.y];
-		LevelManager.S.realData [position.x, position.y].occupant = gameObject;
 		movement_buffer = 0;
-
-		// Initialize first tile
 	}
 	// Update is called once per frame
 	void Update () {
-		this.transform.position += Vector3.left * Time.deltaTime;
-		
-
 
 
 
@@ -39,51 +33,35 @@ public class PlayerMovement : MonoBehaviour {
 
 		// Move Up
 		if (Input.GetKeyDown (KeyCode.W)) {
-			MovePlayerByOne (Direction.NORTH);
+			Debug.Log ("first" + position.x + ", " + position.y);
+			IntVector2 newPosition = position + new IntVector2 (0, 1);
+			LevelManager.S.MoveUnitByOne (position, newPosition);
+			Game_Manager.GM.on_player_move ();
+			position = newPosition;
 		} 
 		// Move Down
 		else if (Input.GetKeyDown (KeyCode.S)) {
-			MovePlayerByOne (Direction.SOUTH);
+			IntVector2 newPosition = position + new IntVector2 (0, -1);
+			LevelManager.S.MoveUnitByOne (position, newPosition);
+			Game_Manager.GM.on_player_move ();
+			position = newPosition;
 		}
 		// Move Right
 		else if (Input.GetKeyDown (KeyCode.D)) {
-			MovePlayerByOne (Direction.EAST);
+			IntVector2 newPosition = position + new IntVector2 (1, 0);
+			LevelManager.S.MoveUnitByOne (position, newPosition);
+			Game_Manager.GM.on_player_move ();
+			position = newPosition;
 		}
 		// Move Left
 		else if (Input.GetKeyDown (KeyCode.A)) {
-			MovePlayerByOne (Direction.WEST);
-			IntVector2 newPosition = position += new IntVector2 (0, 1);
+			IntVector2 newPosition = position + new IntVector2 (-1, 0);
 			LevelManager.S.MoveUnitByOne (position, newPosition);
 			Game_Manager.GM.on_player_move ();
-		} 
-		// Move Down
-		else if (Input.GetKeyDown (KeyCode.S)) {
-			IntVector2 newPosition = position += new IntVector2 (0, -1);
-			LevelManager.S.MoveUnitByOne (position, newPosition);
-			Game_Manager.GM.on_player_move ();
-		}
-		// Move Right
-		else if (Input.GetKeyDown (KeyCode.D)) {
-			IntVector2 newPosition = position += new IntVector2 (1, 0);
-			LevelManager.S.MoveUnitByOne (position, newPosition);
-			Game_Manager.GM.on_player_move ();
-		}
-		// Move Left
-		else if (Input.GetKeyDown (KeyCode.A)) {
-			IntVector2 newPosition = position += new IntVector2 (-1, 0);
-			LevelManager.S.MoveUnitByOne (position, newPosition);
-			Game_Manager.GM.on_player_move ();
+			position = newPosition;
 		}
 
 
 	}
-	
-	// Move player by one block. This handles tile properties.
-	void MovePlayerByOne(Direction moving_direction) {
 
-		// Previous tile loses reference to player
-
-		// New tile gains reference to player
-
-	}
 }
