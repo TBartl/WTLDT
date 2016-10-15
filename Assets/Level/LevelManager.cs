@@ -70,5 +70,19 @@ public class LevelManager : MonoBehaviour {
 		}
 	}
 
+	// Move unit by one block. This handles tile properties and moves the gameobject. Used for both player and enemies.
+	public void MoveUnitByOne(IntVector2 fromPos, IntVector2 toPos) {
+
+		// Update the unit's gameobject's position
+//		Vector3 destination = Vector3(toPos);
+//		realData [toPos.x, toPos.y].occupant.transform.position = destination;
+
+		// New tile gains reference to unit
+		realData[toPos.x, toPos.y].occupant = realData[fromPos.x, fromPos.y].occupant;
+
+		// Previous tile loses reference to unit
+		realData[fromPos.x, fromPos.y].occupant = null;
+
+	}
 
 }
