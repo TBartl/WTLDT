@@ -106,6 +106,8 @@ public class Enemy : BaseMovement {
 			if (_alarmRaised == false && value == true)
 			{
 				AudioManager.S.StartChase();
+				SoundManager.SM.StartWhistle ();
+				Redpanel.RP.StartFlash ();
 			}
             _alarmRaised = value;
         }
