@@ -36,7 +36,6 @@ public class Sentinel : Enemy {
     {
         if (!alarmRaised)
 		{
-			Debug.Log("O");
 			SetRotation((GetRotation() + 90));
 			if (CanSeePlayer(GetDirectionFacing()))
 			{

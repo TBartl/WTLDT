@@ -12,7 +12,7 @@ public enum Direction {
 
 public class PlayerMovement : BaseMovement {
 
-	public static PlayerMovement Player;
+	public static PlayerMovement S;
 
 	List<Direction> movementQueue;
 
@@ -20,7 +20,7 @@ public class PlayerMovement : BaseMovement {
 	// Use this for initialization
 	protected override void Start () {
 		base.Start();
-		Player = this;
+		S = this;
 		PlayerVision.S.OnPlayerMove(pos);
 
 		movementQueue = new List<Direction>();

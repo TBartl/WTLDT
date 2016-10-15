@@ -15,7 +15,7 @@ public class BaseMovement : MonoBehaviour {
 
 	protected void SetRotation(int val)
 	{
-		rotation = val;
+		rotation = (val + 360) % 360;
 		this.transform.rotation = Quaternion.Euler(0, rotation, 0);
 	}
 	protected int GetRotation()

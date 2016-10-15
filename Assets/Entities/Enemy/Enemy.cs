@@ -17,18 +17,24 @@ public class Enemy : BaseMovement {
 
     }
 
+	public bool CanSeePlayerDirectionless()
+	{
+		return (LevelManager.S.realData[pos.x, pos.y].light == LightAmount.lit &&
+			 LevelManager.S.realData[PlayerMovement.S.pos.x, PlayerMovement.S.pos.x].visionBlock == VisionBlock.open) ;
+	}
+
     //For now, sees 2 in front, two to either side + 1 diagonally
 	public bool CanSeePlayer(Direction dir)
     {
-        if (LevelManager.S.realData[pos.x, pos.y].light == LightAmount.lit)
+        if (CanSeePlayerDirectionless())
         {
-            if (dir == Direction.NORTH && PlayerMovement.Player.pos.y >= pos.y)
+            if (dir == Direction.NORTH && PlayerMovement.S.pos.y >= pos.y)
                 return true;
-            else if (dir == Direction.SOUTH && PlayerMovement.Player.pos.y <= pos.y)
+            else if (dir == Direction.SOUTH && PlayerMovement.S.pos.y <= pos.y)
                 return true;
-            else if (dir == Direction.EAST && PlayerMovement.Player.pos.x >= pos.x)
+            else if (dir == Direction.EAST && PlayerMovement.S.pos.x >= pos.x)
                 return true;
-            else if (dir == Direction.WEST && PlayerMovement.Player.pos.x <= pos.x)
+            else if (dir == Direction.WEST && PlayerMovement.S.pos.x <= pos.x)
                 return true;
             else return false;
         }
@@ -37,7 +43,7 @@ public class Enemy : BaseMovement {
 
     public virtual void ChasePlayer()
     {
-        IntVector2 playerPos = PlayerMovement.Player.pos;
+        IntVector2 playerPos = PlayerMovement.S.pos;
         float xDif, yDif;
         xDif = Mathf.Abs(playerPos.x - pos.x);
         yDif = Mathf.Abs(playerPos.y - pos.y);
@@ -70,7 +76,7 @@ public class Enemy : BaseMovement {
             if (playerPos.y < pos.y)
             {
 				if (turnsFirst && GetRotation() != 180)
-					SetRotation(0);
+					SetRotation(180);
 				else
                 {
                     movePos.y -= 1;
