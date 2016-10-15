@@ -732,7 +732,7 @@ Prefab:
     - target: {fileID: 114000013507247932, guid: 46d38da308ec7ea4eb993fe5090fbc26,
         type: 2}
       propertyPath: tileProperties.Array.data[7].passable
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114000013507247932, guid: 46d38da308ec7ea4eb993fe5090fbc26,
         type: 2}
@@ -740,6 +740,11 @@ Prefab:
       value: 
       objectReference: {fileID: 1000010037650760, guid: 8f65e8a55734f6843895d2d6992a143e,
         type: 2}
+    - target: {fileID: 114000013507247932, guid: 46d38da308ec7ea4eb993fe5090fbc26,
+        type: 2}
+      propertyPath: tileProperties.Array.data[8].passable
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 46d38da308ec7ea4eb993fe5090fbc26, type: 2}
   m_IsPrefabParent: 0
