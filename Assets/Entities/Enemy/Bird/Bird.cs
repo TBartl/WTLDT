@@ -15,6 +15,7 @@ public class Bird : Enemy {
 		else if (birddir == Direction.SOUTH)
 			SetRotation(180);
 		else SetRotation(270);
+
 	}
 	
 	public override void Move()
@@ -65,9 +66,7 @@ public class Bird : Enemy {
 	{
 		if (CanSeePlayerDirectionless())
 		{
-			if (Mathf.Abs (PlayerMovement.S.pos.x - pos.x) <= 1 && (PlayerMovement.S.pos.y == pos.y)
-				|| Mathf.Abs (PlayerMovement.S.pos.y - pos.y) <= 1 && (PlayerMovement.S.pos.x == pos.x)
-			) {
+			if (Mathf.Abs (PlayerMovement.S.pos.x - pos.x) <= 1 && Mathf.Abs (PlayerMovement.S.pos.y - pos.y) <= 1) {
 				return true;
 			}
 			else return false;
