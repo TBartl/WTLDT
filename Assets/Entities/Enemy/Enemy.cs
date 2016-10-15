@@ -115,6 +115,13 @@ public class Enemy : BaseMovement {
 		SoundManager.SM.StartWhistle();
 		Redpanel.RP.StartFlash();
 		StartCoroutine(Hop());
+
+		foreach (GameObject g in GameObject.FindGameObjectsWithTag("Vision"))
+		{
+			g.SetActive(false);
+		}
+		StartCoroutine(PreserveThisVisionForASecond());
+		
 	}
 
 	IEnumerator Hop()
@@ -128,5 +135,16 @@ public class Enemy : BaseMovement {
 			yield return null;
 		}
 		this.transform.position = position;
+	}
+
+	IEnumerator PreserveThisVisionForASecond()
+	{
+		GameObject vision = this.transform.FindChild("Vision").gameObject;
+
+		vision.SetActive(true);
+		for (float f = 0; f < 1f; f+= Time.deltaTime)
+			yield return null;
+
+		vision.SetActive(false);
 	}
 }

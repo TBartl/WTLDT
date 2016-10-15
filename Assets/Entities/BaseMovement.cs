@@ -16,8 +16,9 @@ public class BaseMovement : MonoBehaviour {
 
 	protected void SetRotation(int val)
 	{
-		rotation = (val + 360) % 360;
-		this.transform.rotation = Quaternion.Euler(0, rotation, 0);
+		val = (val + 360) % 360;
+		StartCoroutine(SmoothTurn(rotation, val));
+		rotation = val;
 	}
 	protected int GetRotation()
 	{
@@ -99,6 +100,17 @@ public class BaseMovement : MonoBehaviour {
         LevelManager.S.SmoothHitCheck(fromPos, toPos);
     }
 
+	protected IEnumerator SmoothTurn(int fromRot, int toRot)
+	{
+		transform.rotation = Quaternion.Euler(0, fromRot, 0);
+		for (float f = 0; f < smoothMoveTime; f += Time.deltaTime)
+		{
+			float percent = f / smoothMoveTime;
+			transform.rotation = Quaternion.Lerp(Quaternion.Euler(0, fromRot, 0), Quaternion.Euler(0, toRot, 0), percent);
+			yield return null;
+		}
+		transform.rotation = Quaternion.Euler(0, toRot, 0);
+	}
 	
 
 }
