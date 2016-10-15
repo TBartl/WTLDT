@@ -27,9 +27,8 @@ GameObject:
   - 114: {fileID: 114000010561362422}
   - 114: {fileID: 114000012484629618}
   - 114: {fileID: 114000011501581586}
-  - 114: {fileID: 114000014247842246}
   m_Layer: 0
-  m_Name: Player
+  m_Name: Player Intro
   m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -133,7 +132,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5437b634726fd714290ab20b3a30b57f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 6
+  radius: 16
   outskirtSize: 2
 --- !u!114 &114000012788362024
 MonoBehaviour:
@@ -144,20 +143,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7f48b0f6b05e71f48bf0b533aca04a0a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pos:
-    x: 0
-    y: 0
---- !u!114 &114000014247842246
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000013192762668}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df75c82107d41964f95445f3bb3ae73f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   pos:

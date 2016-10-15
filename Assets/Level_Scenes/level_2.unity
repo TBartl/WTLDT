@@ -713,6 +713,11 @@ Prefab:
       propertyPath: textFile
       value: 
       objectReference: {fileID: 4900000, guid: aa7e1741599e81f4194a82e7ba2aa96f, type: 3}
+    - target: {fileID: 114000013507247932, guid: 46d38da308ec7ea4eb993fe5090fbc26,
+        type: 2}
+      propertyPath: tileProperties.Array.data[6].visionBlock
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 46d38da308ec7ea4eb993fe5090fbc26, type: 2}
   m_IsPrefabParent: 0
