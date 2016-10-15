@@ -289,7 +289,12 @@ Prefab:
     - target: {fileID: 114000013842543380, guid: 37b49594023251843989eec7fe36393e,
         type: 2}
       propertyPath: m_Text
-      value: If you are spotted you must kill the king before you are caught.
+      value: They'll need an extra leg if they want to catch and stop me.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010937378772, guid: 37b49594023251843989eec7fe36393e,
+        type: 2}
+      propertyPath: time
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 37b49594023251843989eec7fe36393e, type: 2}
