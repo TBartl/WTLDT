@@ -6,6 +6,7 @@ public class PlayerVision : MonoBehaviour {
 	public static PlayerVision S;
 
 	public int radius;
+	public int outskirtSize;
 
 	IntVector2 lastPos;
 
@@ -14,7 +15,7 @@ public class PlayerVision : MonoBehaviour {
 
 	public void Awake()
 	{
-		arraySize = radius * 2 + 1; //Left(r) + Right(r) + Player(1)
+		arraySize = (radius) * 2 + 1; //Left(r) + Right(r) + Player(1)
 		lightValues = new int[arraySize, arraySize];
 		S = this;
 	}
@@ -29,7 +30,7 @@ public class PlayerVision : MonoBehaviour {
 	{
 		DeactivateLights();
 		lastPos = newPos;
-		ActivateLights(newPos);
+		ActivateLights();
 	}
 
 
@@ -52,16 +53,23 @@ public class PlayerVision : MonoBehaviour {
 					LevelManager.S.SetLightOfTile(new IntVector2(xReal, yReal), LightAmount.revealed);
 				}
 
+			}
+		}
+
+		for (int yIndex = 0; yIndex < arraySize; yIndex++)
+		{
+			for (int xIndex = 0; xIndex < arraySize; xIndex++)
+			{
 				// Reset light matrix
 				lightValues[xIndex, yIndex] = 0;
 			}
 		}
 	}
 
-	void ActivateLights(IntVector2 newPos)
+	void ActivateLights()
 	{
 
-		lightValues[radius + 1, radius + 1] = radius + 1; //Light player
+		lightValues[radius + 1, radius + 1] = radius; //Light player
 		SpreadLightAroundPos(new IntVector2(radius + 1, radius + 1), 1); //Light around player
 
 		GenerateLightMatrix();
@@ -119,7 +127,7 @@ public class PlayerVision : MonoBehaviour {
 				int xReal = xIndex - radius - 1 + lastPos.x;
 				if (xReal < 0 || xReal >= LevelManager.S.size.x)
 					continue; // Out of bounds
-				if (lightValues[xIndex, yIndex] > 1)
+				if (lightValues[xIndex, yIndex] > outskirtSize)
 					LevelManager.S.SetLightOfTile(new IntVector2(xReal, yReal), LightAmount.lit);
 				else if (lightValues[xIndex, yIndex] > 0)
 					LevelManager.S.SetLightOfTile(new IntVector2(xReal, yReal), LightAmount.litOutskirts);
