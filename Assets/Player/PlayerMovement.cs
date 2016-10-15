@@ -47,8 +47,6 @@ public class PlayerMovement : MonoBehaviour {
 
 
 	}
-
-	void 
 	
 	// Move player by one block. This handles tile properties.
 	void MovePlayerByOne(Direction moving_direction) {
