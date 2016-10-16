@@ -109,7 +109,7 @@ MonoBehaviour:
   turnsFirst: 1
   moleDir: 0
   hillLocations:
-  - x: 5
+  - x: 4
     y: 18
   - x: 4
     y: 16

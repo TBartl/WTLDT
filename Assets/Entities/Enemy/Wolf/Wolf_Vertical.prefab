@@ -187,7 +187,7 @@ MonoBehaviour:
     x: 0
     y: 0
   turnsFirst: 1
-  wolfDir: 1
+  wolfDir: 2
 --- !u!114 &114000013275675624
 MonoBehaviour:
   m_ObjectHideFlags: 1
