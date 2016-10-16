@@ -571,8 +571,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce896a09de4bd2646bf5fa280fd55317, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainMusic: {fileID: 82000012151711848}
-  chaseMusic: {fileID: 82000010122068338}
+  mainMusic: {fileID: 82000010594001756}
+  chaseMusic: {fileID: 82000012625830480}
   mainMusic2: {fileID: 82000012151711848}
   chaseMusic2: {fileID: 82000012464655472}
   creditMusic: {fileID: 82000010122068338}
