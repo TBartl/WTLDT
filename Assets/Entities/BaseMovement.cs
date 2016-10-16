@@ -90,6 +90,9 @@ public class BaseMovement : MonoBehaviour {
 
 	protected IEnumerator SmoothHit(IntVector2 fromPos, IntVector2 toPos)
 	{
+		if (anim)
+			anim.Play("Jump");
+
 		transform.position = (Vector3)fromPos;
 		IntVector2 diff = toPos - fromPos;
 		transform.rotation = Quaternion.Euler(0, Mathf.Rad2Deg * Mathf.Atan2(diff.y, -diff.x) - 90, 0);
@@ -105,7 +108,10 @@ public class BaseMovement : MonoBehaviour {
 		}
 		transform.position = (Vector3)fromPos;
         LevelManager.S.SmoothHitCheck(fromPos, toPos);
-    }
+
+		if (anim)
+			anim.Play("Idle");
+	}
 
 	protected IEnumerator SmoothTurn(int fromRot, int toRot)
 	{

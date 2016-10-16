@@ -41,6 +41,7 @@ GameObject:
   - 23: {fileID: 23000011220316036}
   - 114: {fileID: 114000012139111478}
   - 114: {fileID: 114000013055142434}
+  - 114: {fileID: 114000013552022466}
   m_Layer: 0
   m_Name: TileRock
   m_TagString: Untagged
@@ -183,3 +184,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21aa8fd092d2f0540a4ec9cfc4b7f3c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114000013552022466
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013571357732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d59dda55c7f88a54681df75b291e7d0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  meshes:
+  - {fileID: 4300002, guid: ca4bd39f0de841146b8b280d0f3702f5, type: 3}
+  - {fileID: 4300014, guid: ca4bd39f0de841146b8b280d0f3702f5, type: 3}
+  - {fileID: 4300012, guid: ca4bd39f0de841146b8b280d0f3702f5, type: 3}
+  - {fileID: 4300010, guid: ca4bd39f0de841146b8b280d0f3702f5, type: 3}

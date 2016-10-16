@@ -24,6 +24,7 @@ ModelImporter:
     100032: Bone_002_R
     100034: Bone_002_R_001
     100036: Bone_003
+    100038: Plane_002
     400000: //RootNode
     400002: Bunny
     400004: Plane
@@ -43,18 +44,22 @@ ModelImporter:
     400032: Bone_002_R
     400034: Bone_002_R_001
     400036: Bone_003
+    400038: Plane_002
     2300000: //RootNode
     2300002: Bunny
     2300004: Plane
     2300006: Plane_001
+    2300008: Plane_002
     3300000: //RootNode
     3300002: Bunny
     3300004: Plane
     3300006: Plane_001
+    3300008: Plane_002
     4300000: Cube
     4300002: Bunny
     4300004: Plane
     4300006: Plane_001
+    4300008: Plane_002
     7400000: Default Take
     7400002: ArmatureAction
     7400004: Idle_001
