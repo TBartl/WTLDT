@@ -113,7 +113,10 @@ public class Enemy : BaseMovement {
 		alarmRaised = true;
 		AudioManager.S.StartChase();
 		SoundManager.SM.StartWhistle();
+
+		// if in credit level, should not flash red
 		Redpanel.RP.StartFlash();
+
 		StartCoroutine(Hop());
 
 		foreach (GameObject g in GameObject.FindGameObjectsWithTag("Vision"))
