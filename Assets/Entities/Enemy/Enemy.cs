@@ -134,7 +134,7 @@ public class Enemy : BaseMovement {
 			transform.position = position + .6f * Vector3.up * Mathf.Sin(percent * Mathf.PI);
 			yield return null;
 		}
-		this.transform.position = position;
+		this.transform.position = (Vector3)pos;
 	}
 
 	IEnumerator PreserveThisVisionForASecond()

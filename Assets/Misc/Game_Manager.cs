@@ -47,6 +47,10 @@ public class Game_Manager : MonoBehaviour {
 		int scene = SceneManager.GetActiveScene().buildIndex;
 		if (scene == 8) {
 			AudioManager.S.changeMusic ();
+		} 
+		// Change this number later
+		else if (scene == 12) {
+			AudioManager.S.ChangeToCreditMusic ();
 		}
 		SceneManager.LoadScene(scene + 1);
 	}

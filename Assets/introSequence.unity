@@ -213,21 +213,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 114000014248191204, guid: 45f1f0cb250724046a60797a514e5dfa,
-        type: 2}
-      propertyPath: mainMusic
-      value: 
-      objectReference: {fileID: 2079517142}
-    - target: {fileID: 114000014248191204, guid: 45f1f0cb250724046a60797a514e5dfa,
-        type: 2}
-      propertyPath: chaseMusic
-      value: 
-      objectReference: {fileID: 2099706147}
-    - target: {fileID: 82000010122068338, guid: 45f1f0cb250724046a60797a514e5dfa,
-        type: 2}
-      propertyPath: Loop
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 45f1f0cb250724046a60797a514e5dfa, type: 2}
   m_IsPrefabParent: 0
@@ -1188,16 +1173,6 @@ Prefab:
     - {fileID: 114000010937378772, guid: d497ecaca5eef6d49bbaca17bbb96033, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: d497ecaca5eef6d49bbaca17bbb96033, type: 2}
   m_IsPrefabParent: 0
---- !u!82 &2079517142 stripped
-AudioSource:
-  m_PrefabParentObject: {fileID: 82000012151711848, guid: 45f1f0cb250724046a60797a514e5dfa,
-    type: 2}
-  m_PrefabInternal: {fileID: 388886551}
---- !u!82 &2099706147 stripped
-AudioSource:
-  m_PrefabParentObject: {fileID: 82000010122068338, guid: 45f1f0cb250724046a60797a514e5dfa,
-    type: 2}
-  m_PrefabInternal: {fileID: 388886551}
 --- !u!1001 &2139691213
 Prefab:
   m_ObjectHideFlags: 0

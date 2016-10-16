@@ -9,6 +9,9 @@ public class AudioManager : MonoBehaviour {
 	public AudioSource chaseMusic;
 	public AudioSource mainMusic2;
 	public AudioSource chaseMusic2;
+	public AudioSource creditMusic;
+
+	public int musiclevel;
 
 	void Awake ()
 	{
@@ -21,11 +24,17 @@ public class AudioManager : MonoBehaviour {
 			S = this;
 			DontDestroyOnLoad(this.gameObject);
 		}
+		musiclevel = 1;
 	}
 
 	// Use this for initialization
 	void Start () {
-		mainMusic.Play();
+		if (musiclevel == 1)
+			mainMusic.Play ();
+		else if (musiclevel == 2)
+			mainMusic2.Play ();
+		else if (musiclevel == 3)
+			creditMusic.Play ();
 	}
 	
 	// Update is called once per frame
@@ -36,23 +45,43 @@ public class AudioManager : MonoBehaviour {
 	public void changeMusic() {
 		mainMusic.Stop ();
 		chaseMusic.Stop ();
-		mainMusic = mainMusic2;
-		chaseMusic = chaseMusic2;
-		mainMusic.Play ();
+		musiclevel = 2;
+		mainMusic2.Play ();
+	}
+
+	public void ChangeToCreditMusic() {
+		mainMusic.Stop ();
+		chaseMusic.Stop ();
+		mainMusic2.Stop ();
+		chaseMusic2.Stop ();
+		musiclevel = 3;
+		creditMusic.Play ();
 	}
 
 	public void StartChase()
 	{
-		mainMusic.Stop();
-		chaseMusic.Play();
+		if (musiclevel == 1) {
+			mainMusic.Stop ();
+			chaseMusic.Play ();
+		}
+		else if (musiclevel == 2) {
+			mainMusic2.Stop ();
+			chaseMusic2.Play ();
+		}
 	}
 
 	void OnLevelWasLoaded()
 	{
-		if (chaseMusic.isPlaying)
+		
+		if (chaseMusic.isPlaying || chaseMusic2.isPlaying)
 		{
-			chaseMusic.Stop();
-			mainMusic.Play();
+			if (musiclevel == 1) {
+				chaseMusic.Stop ();
+				mainMusic.Play ();
+			} else if (musiclevel == 2) {
+				chaseMusic2.Stop ();
+				mainMusic2.Play ();
+			}
 		}
 	}
 

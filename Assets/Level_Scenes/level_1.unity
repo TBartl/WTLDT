@@ -171,16 +171,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 114000014248191204, guid: 45f1f0cb250724046a60797a514e5dfa,
-        type: 2}
-      propertyPath: mainMusic2
-      value: 
-      objectReference: {fileID: 1572007349}
-    - target: {fileID: 114000014248191204, guid: 45f1f0cb250724046a60797a514e5dfa,
-        type: 2}
-      propertyPath: chaseMusic2
-      value: 
-      objectReference: {fileID: 2013349262}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 45f1f0cb250724046a60797a514e5dfa, type: 2}
   m_IsPrefabParent: 0
@@ -284,7 +274,12 @@ Prefab:
     - target: {fileID: 114000013842543380, guid: 37b49594023251843989eec7fe36393e,
         type: 2}
       propertyPath: m_Text
-      value: Who want's some king for dinner?
+      value: All animals are enemies! Kill the king!!
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010937378772, guid: 37b49594023251843989eec7fe36393e,
+        type: 2}
+      propertyPath: time
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 37b49594023251843989eec7fe36393e, type: 2}
@@ -614,11 +609,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 46d38da308ec7ea4eb993fe5090fbc26, type: 2}
   m_IsPrefabParent: 0
---- !u!82 &1572007349 stripped
-AudioSource:
-  m_PrefabParentObject: {fileID: 82000012151711848, guid: 45f1f0cb250724046a60797a514e5dfa,
-    type: 2}
-  m_PrefabInternal: {fileID: 388886551}
 --- !u!1 &1730066708
 GameObject:
   m_ObjectHideFlags: 0
@@ -754,8 +744,3 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 75ecf3c67defd0e4abb6548385597d66, type: 2}
   m_IsPrefabParent: 0
---- !u!82 &2013349262 stripped
-AudioSource:
-  m_PrefabParentObject: {fileID: 82000010122068338, guid: 45f1f0cb250724046a60797a514e5dfa,
-    type: 2}
-  m_PrefabInternal: {fileID: 388886551}
