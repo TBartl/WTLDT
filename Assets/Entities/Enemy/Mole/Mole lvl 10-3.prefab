@@ -25,7 +25,7 @@ GameObject:
   - 114: {fileID: 114000014103159616}
   - 114: {fileID: 114000011379298520}
   m_Layer: 0
-  m_Name: Mole lvl 10-1
+  m_Name: Mole lvl 10-3
   m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -189,9 +189,9 @@ MonoBehaviour:
   turnsFirst: 1
   moleDir: 0
   hillLocations:
-  - x: 4
-    y: 18
-  - x: 4
+  - x: 3
+    y: 14
+  - x: 1
     y: 16
 --- !u!114 &114000014103159616
 MonoBehaviour:
