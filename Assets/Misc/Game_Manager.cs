@@ -104,6 +104,6 @@ public class Game_Manager : MonoBehaviour {
 		}
 		else if (scene == 19)
 			AudioManager.S.changeMusic ();
-		SceneManager.LoadScene(scene + 1);
+		SceneManager.LoadScene((scene + 1) % SceneManager.sceneCount);
 	}
 }
