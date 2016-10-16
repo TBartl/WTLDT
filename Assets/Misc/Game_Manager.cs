@@ -10,7 +10,9 @@ public class Game_Manager : MonoBehaviour {
 	public bool levelEnding = false;
 
 	float inactiveTime = 0;
-	
+
+	public static bool undetectable = false;
+
     void Awake()
     {
         S = this;
@@ -25,6 +27,11 @@ public class Game_Manager : MonoBehaviour {
 		if (Input.GetKeyDown(KeyCode.Alpha0))
 		{
 			SceneManager.LoadScene(0);
+		}
+
+		if (Input.GetKeyDown(KeyCode.U))
+		{
+			undetectable = !undetectable;
 		}
 
 		inactiveTime += Time.deltaTime;

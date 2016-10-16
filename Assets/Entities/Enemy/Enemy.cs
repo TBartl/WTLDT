@@ -19,13 +19,19 @@ public class Enemy : BaseMovement {
 
 	public bool CanSeePlayerDirectionless()
 	{
+		if (Game_Manager.undetectable)
+			return false;
+
 		return (LevelManager.S.realData[pos.x, pos.y].light == LightAmount.lit &&
 			 LevelManager.S.realData[PlayerMovement.S.pos.x, PlayerMovement.S.pos.y].visionBlock == VisionBlock.open) ;
 	}
 
 	public virtual bool CanSeePlayer(Direction dir)
     {
-        if (CanSeePlayerDirectionless())
+		if (Game_Manager.undetectable)
+			return false;
+
+		if (CanSeePlayerDirectionless())
         {
             if (dir == Direction.NORTH && PlayerMovement.S.pos.y > pos.y)
                 return true;
