@@ -75,12 +75,9 @@ public class Mole : Enemy {
                 }
 
             }
-            if (curStep == StepInProcess.Up)
+            if (CanSeePlayer(GetDirectionFacing()))
             {
-                if (CanSeePlayer(GetDirectionFacing()))
-                {
-                    RaiseAlarm();
-                }
+                RaiseAlarm();
             }
         }
     }
