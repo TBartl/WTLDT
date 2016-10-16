@@ -192,7 +192,7 @@ MonoBehaviour:
   - x: 4
     y: 18
   - x: 4
-    y: 16
+    y: 15
 --- !u!114 &114000014103159616
 MonoBehaviour:
   m_ObjectHideFlags: 1
