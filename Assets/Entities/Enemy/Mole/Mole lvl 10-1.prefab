@@ -219,7 +219,7 @@ MonoBehaviour:
   moleDir: 0
   hillLocations:
   - x: 4
-    y: 18
+    y: 19
   - x: 4
     y: 15
 --- !u!114 &114000014103159616

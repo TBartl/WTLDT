@@ -7,8 +7,7 @@ public class Mole : Enemy {
     enum StepInProcess
     {
         Arrived,
-        Up,
-        Down
+        Up
     }
 
     public Direction moleDir;
@@ -50,10 +49,7 @@ public class Mole : Enemy {
             {
                 //Animate it going into hole
                 //----------------------------------
-                curStep = StepInProcess.Down;
-            }
-            else if (curStep == StepInProcess.Down)
-            {
+                
                 IntVector2 initialPos = pos;
                 currentHillIndex++;
                 if (currentHillIndex >= hillLocations.Length)
