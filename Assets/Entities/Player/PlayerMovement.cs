@@ -41,7 +41,7 @@ public class PlayerMovement : BaseMovement {
 
 		if (movementQueue.Count > 0 && Game_Manager.S.levelEnding == false)
 		{
-			//SoundManager.SM.StartStep ();
+			SoundManager.SM.StartStep ();
 
 			Direction toDir = movementQueue[0];
 			movementQueue.RemoveAt(0);
