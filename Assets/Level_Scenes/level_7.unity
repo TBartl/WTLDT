@@ -173,29 +173,9 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114000014248191204, guid: 45f1f0cb250724046a60797a514e5dfa,
         type: 2}
-      propertyPath: mainMusic
-      value: 
-      objectReference: {fileID: 2079517142}
-    - target: {fileID: 114000014248191204, guid: 45f1f0cb250724046a60797a514e5dfa,
-        type: 2}
-      propertyPath: chaseMusic
-      value: 
-      objectReference: {fileID: 2099706147}
-    - target: {fileID: 82000010122068338, guid: 45f1f0cb250724046a60797a514e5dfa,
-        type: 2}
-      propertyPath: Loop
-      value: 1
+      propertyPath: musiclevel
+      value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 82000012151711848, guid: 45f1f0cb250724046a60797a514e5dfa,
-        type: 2}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 148825897abab441fbfdd188e2783a5b, type: 3}
-    - target: {fileID: 82000010122068338, guid: 45f1f0cb250724046a60797a514e5dfa,
-        type: 2}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 18e60cc2a9ccd444ba8427a1060a941e, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 45f1f0cb250724046a60797a514e5dfa, type: 2}
   m_IsPrefabParent: 0
@@ -904,13 +884,3 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 75ecf3c67defd0e4abb6548385597d66, type: 2}
   m_IsPrefabParent: 0
---- !u!82 &2079517142 stripped
-AudioSource:
-  m_PrefabParentObject: {fileID: 82000012151711848, guid: 45f1f0cb250724046a60797a514e5dfa,
-    type: 2}
-  m_PrefabInternal: {fileID: 388886551}
---- !u!82 &2099706147 stripped
-AudioSource:
-  m_PrefabParentObject: {fileID: 82000010122068338, guid: 45f1f0cb250724046a60797a514e5dfa,
-    type: 2}
-  m_PrefabInternal: {fileID: 388886551}

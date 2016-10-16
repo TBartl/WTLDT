@@ -29,6 +29,12 @@ public class AudioManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+
+		startMusic ();
+	}
+
+	public void startMusic() {
+		Debug.Log ("music level: " + musiclevel);
 		if (musiclevel == 1)
 			mainMusic.Play ();
 		else if (musiclevel == 2)

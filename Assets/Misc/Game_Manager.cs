@@ -24,6 +24,15 @@ public class Game_Manager : MonoBehaviour {
 		if (deathCount > 5) {
 			OtherDialogues.OD.ChangeDialogue ();
 		}
+		int scene = SceneManager.GetActiveScene().buildIndex;
+		if (scene <= 8) {
+			AudioManager.S.musiclevel = 1;
+		} else if (scene > 8 && scene < 19) {
+			AudioManager.S.musiclevel = 2;
+		} else {
+			AudioManager.S.musiclevel = 3;
+		}
+//		AudioManager.S.startMusic ();
 	}
 
 	void Update()
@@ -90,7 +99,7 @@ public class Game_Manager : MonoBehaviour {
 			AudioManager.S.changeMusic ();
 		} 
 		// Change this number later
-		else if (scene == 16) {
+		else if (scene == 18) {
 			AudioManager.S.ChangeToCreditMusic ();
 		}
 		SceneManager.LoadScene(scene + 1);
