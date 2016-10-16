@@ -8,6 +8,8 @@ public class Game_Manager : MonoBehaviour {
 
     public static Game_Manager S;
 	public bool levelEnding = false;
+
+	float inactiveTime = 0;
 	
     void Awake()
     {
@@ -21,6 +23,16 @@ public class Game_Manager : MonoBehaviour {
 			WinLevel();
 		}
 		if (Input.GetKeyDown(KeyCode.Alpha0))
+		{
+			SceneManager.LoadScene(0);
+		}
+
+		inactiveTime += Time.deltaTime;
+
+		if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D)
+			|| Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.DownArrow))
+			inactiveTime = 0;
+		if (inactiveTime > 60 && SceneManager.GetActiveScene().buildIndex != 0)
 		{
 			SceneManager.LoadScene(0);
 		}
