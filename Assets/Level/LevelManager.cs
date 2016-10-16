@@ -96,7 +96,7 @@ public class LevelManager : MonoBehaviour {
 		if (realData[toPos.x, toPos.y].occupant && realData[toPos.x, toPos.y].occupant.tag == "Collectable")
 		{
 			realData[toPos.x, toPos.y].occupant.GetComponent<Collectable>().Collect(toPos);
-			realData[toPos.x, toPos.y].occupant.GetComponent<MeshRenderer>().enabled = false;
+			realData[toPos.x, toPos.y].occupant.GetComponent<Lightable>().HideAfterAFrame();
 		}
 
 		// New tile gains reference to unit
@@ -112,12 +112,12 @@ public class LevelManager : MonoBehaviour {
     {
 		if (!InBounds(toPos))
 			return;
-            if (realData[fromPos.x, fromPos.y].occupant && realData[fromPos.x, fromPos.y].occupant.tag == "Collectable" &&
-                realData[toPos.x, toPos.y].occupant && realData[toPos.x, toPos.y].occupant.tag == "enemy")
-            {
-                realData[fromPos.x, fromPos.y].occupant.GetComponent<Collectable>().Collect(toPos);
-                realData[fromPos.x, fromPos.y].occupant.GetComponent<MeshRenderer>().enabled = false;
-            }
+        if (realData[fromPos.x, fromPos.y].occupant && realData[fromPos.x, fromPos.y].occupant.tag == "Collectable" &&
+            realData[toPos.x, toPos.y].occupant && realData[toPos.x, toPos.y].occupant.tag == "enemy")
+        {
+            realData[fromPos.x, fromPos.y].occupant.GetComponent<Collectable>().Collect(toPos);
+			realData[fromPos.x, fromPos.y].occupant.GetComponent<Lightable>().HideAfterAFrame();
+		}
     }
 
 
