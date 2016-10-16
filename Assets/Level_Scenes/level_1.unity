@@ -129,6 +129,17 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 82000012739417530, guid: 0fdd3d5b0ddbf4524a1e1bfabcdecf27,
+        type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: e96d2a4dde2c24660b3108fa0ba812da, type: 3}
+    - target: {fileID: 114000010400486944, guid: 0fdd3d5b0ddbf4524a1e1bfabcdecf27,
+        type: 2}
+      propertyPath: stepping
+      value: 
+      objectReference: {fileID: 1000013081777168, guid: df9291677335d42479e9da997c5ade7b,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fdd3d5b0ddbf4524a1e1bfabcdecf27, type: 2}
   m_IsPrefabParent: 0
@@ -173,19 +184,14 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114000014248191204, guid: 45f1f0cb250724046a60797a514e5dfa,
         type: 2}
-      propertyPath: mainMusic
+      propertyPath: mainMusic2
       value: 
-      objectReference: {fileID: 2079517142}
+      objectReference: {fileID: 1572007349}
     - target: {fileID: 114000014248191204, guid: 45f1f0cb250724046a60797a514e5dfa,
         type: 2}
-      propertyPath: chaseMusic
+      propertyPath: chaseMusic2
       value: 
-      objectReference: {fileID: 2099706147}
-    - target: {fileID: 82000010122068338, guid: 45f1f0cb250724046a60797a514e5dfa,
-        type: 2}
-      propertyPath: Loop
-      value: 1
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2013349262}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 45f1f0cb250724046a60797a514e5dfa, type: 2}
   m_IsPrefabParent: 0
@@ -619,6 +625,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 46d38da308ec7ea4eb993fe5090fbc26, type: 2}
   m_IsPrefabParent: 0
+--- !u!82 &1572007349 stripped
+AudioSource:
+  m_PrefabParentObject: {fileID: 82000012151711848, guid: 45f1f0cb250724046a60797a514e5dfa,
+    type: 2}
+  m_PrefabInternal: {fileID: 388886551}
 --- !u!1 &1730066708
 GameObject:
   m_ObjectHideFlags: 0
@@ -754,12 +765,7 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 75ecf3c67defd0e4abb6548385597d66, type: 2}
   m_IsPrefabParent: 0
---- !u!82 &2079517142 stripped
-AudioSource:
-  m_PrefabParentObject: {fileID: 82000012151711848, guid: 45f1f0cb250724046a60797a514e5dfa,
-    type: 2}
-  m_PrefabInternal: {fileID: 388886551}
---- !u!82 &2099706147 stripped
+--- !u!82 &2013349262 stripped
 AudioSource:
   m_PrefabParentObject: {fileID: 82000010122068338, guid: 45f1f0cb250724046a60797a514e5dfa,
     type: 2}
