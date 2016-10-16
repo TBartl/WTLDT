@@ -30,13 +30,13 @@ public class PlayerMovement : BaseMovement {
 
 		// Detect if there is any input from the player.
 
-		if (Input.GetKeyDown(KeyCode.W))
+		if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
 			movementQueue.Add(Direction.NORTH);
-		else if (Input.GetKeyDown(KeyCode.D))
+		else if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
 			movementQueue.Add(Direction.EAST);
-		else if (Input.GetKeyDown(KeyCode.S))
+		else if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
 			movementQueue.Add(Direction.SOUTH);
-		else if (Input.GetKeyDown(KeyCode.A))
+		else if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
 			movementQueue.Add(Direction.WEST);
 
 		if (movementQueue.Count > 0 && Game_Manager.S.levelEnding == false)
