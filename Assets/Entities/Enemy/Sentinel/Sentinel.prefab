@@ -605,7 +605,7 @@ MonoBehaviour:
     x: 0
     y: 0
   turnsFirst: 1
-  useRandomDirection: 1
+  useRandomDirection: 0
 --- !u!114 &114000013889601048
 MonoBehaviour:
   m_ObjectHideFlags: 1
