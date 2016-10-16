@@ -29,7 +29,6 @@ public class AudioManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
 		startMusic ();
 	}
 
@@ -81,11 +80,13 @@ public class AudioManager : MonoBehaviour {
 		
 		if (chaseMusic.isPlaying || chaseMusic2.isPlaying)
 		{
+			chaseMusic.Stop ();
+			chaseMusic2.Stop ();
 			if (musiclevel == 1) {
-				chaseMusic.Stop ();
+				mainMusic2.Stop ();
 				mainMusic.Play ();
 			} else if (musiclevel == 2) {
-				chaseMusic2.Stop ();
+				mainMusic.Stop ();
 				mainMusic2.Play ();
 			}
 		}
