@@ -206,12 +206,12 @@ MonoBehaviour:
   turnsFirst: 1
   moleDir: 0
   hillLocations:
-  - x: 6
-    y: 3
-  - x: 5
-    y: 3
-  - x: 4
-    y: 3
+  - x: 22
+    y: 12
+  - x: 20
+    y: 9
+  - x: 25
+    y: 10
 --- !u!114 &114000012738061450
 MonoBehaviour:
   m_ObjectHideFlags: 1
