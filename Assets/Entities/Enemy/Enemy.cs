@@ -121,7 +121,8 @@ public class Enemy : BaseMovement {
 		SoundManager.SM.StartWhistle();
 
 		// if in credit level, should not flash red
-		Redpanel.RP.StartFlash();
+		if (AudioManager.S.musiclevel != 3)
+			Redpanel.RP.StartFlash();
 
 		StartCoroutine(Hop());
 

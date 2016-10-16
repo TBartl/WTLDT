@@ -76,7 +76,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fabaf9778438be45a5fa31ea2fb52df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time: 5
+  time: 4
 --- !u!114 &114000011654638192
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -184,7 +184,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Uh oh. Guards. Let's sneak around. Wouldn't want them to hop on me.
+  m_Text: "Another lion claiming the throne? \nI'll see about that."
 --- !u!222 &222000010614354872
 CanvasRenderer:
   m_ObjectHideFlags: 1
