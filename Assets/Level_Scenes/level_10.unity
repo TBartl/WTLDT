@@ -676,7 +676,11 @@ Prefab:
         type: 2}
       propertyPath: tileProperties.Array.data[9].occupant
       value: 
+<<<<<<< HEAD
       objectReference: {fileID: 1000010801755632, guid: c220c8d9068254f99bd379e81915f978,
+=======
+      objectReference: {fileID: 1000010801755632, guid: c7102eeb45f1fac4085c1ab84e14a4c8,
+>>>>>>> origin/master
         type: 2}
     - target: {fileID: 114000013507247932, guid: 46d38da308ec7ea4eb993fe5090fbc26,
         type: 2}
@@ -812,7 +816,7 @@ Prefab:
         type: 2}
       propertyPath: tileProperties.Array.data[15].occupant
       value: 
-      objectReference: {fileID: 1000010801755632, guid: c7102eeb45f1fac4085c1ab84e14a4c8,
+      objectReference: {fileID: 1000010801755632, guid: c220c8d9068254f99bd379e81915f978,
         type: 2}
     - target: {fileID: 114000013507247932, guid: 46d38da308ec7ea4eb993fe5090fbc26,
         type: 2}

@@ -7,11 +7,14 @@ public class BaseMovement : MonoBehaviour {
 	public static float smoothMoveTime = .1f;
 	int rotation = 0;
 
+	Animation anim;
+
 	protected virtual void Start()
 	{
 		pos.x = Mathf.RoundToInt(transform.position.x);
 		pos.y = Mathf.RoundToInt(transform.position.z);
 		rotation = Mathf.RoundToInt(rotation);
+		anim = this.GetComponent<Animation>();
 	}
 
 	protected void SetRotation(int val)
@@ -67,6 +70,8 @@ public class BaseMovement : MonoBehaviour {
 
 	protected IEnumerator SmoothMove(IntVector2 fromPos, IntVector2 toPos)
 	{
+		if (anim)
+			anim.Play("Jump");
 		transform.position = (Vector3)fromPos;
 		IntVector2 diff = toPos - fromPos;
 		SetRotation(Mathf.RoundToInt(Mathf.Rad2Deg * Mathf.Atan2(diff.y, -diff.x) - 90));
@@ -78,7 +83,9 @@ public class BaseMovement : MonoBehaviour {
 			yield return null;
 		}
 		transform.position = (Vector3)toPos;
-        
+
+		if (anim)
+			anim.Play("Idle");
 	}
 
 	protected IEnumerator SmoothHit(IntVector2 fromPos, IntVector2 toPos)
