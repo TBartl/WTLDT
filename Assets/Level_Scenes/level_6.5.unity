@@ -709,7 +709,7 @@ Prefab:
         type: 2}
       propertyPath: tileProperties.Array.data[10].occupant
       value: 
-      objectReference: {fileID: 1000010037650760, guid: 3d9c1f0cb3d88d74d8fefee614b6f782,
+      objectReference: {fileID: 1000010037650760, guid: 8f65e8a55734f6843895d2d6992a143e,
         type: 2}
     - target: {fileID: 114000013507247932, guid: 46d38da308ec7ea4eb993fe5090fbc26,
         type: 2}
@@ -720,7 +720,7 @@ Prefab:
     - target: {fileID: 114000013507247932, guid: 46d38da308ec7ea4eb993fe5090fbc26,
         type: 2}
       propertyPath: tileProperties.Array.data[10].asciiChar
-      value: 76
+      value: 67
       objectReference: {fileID: 0}
     - target: {fileID: 114000013507247932, guid: 46d38da308ec7ea4eb993fe5090fbc26,
         type: 2}
