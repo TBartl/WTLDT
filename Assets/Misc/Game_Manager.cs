@@ -14,6 +14,18 @@ public class Game_Manager : MonoBehaviour {
         S = this;
     }
 
+	void Update()
+	{
+		if (Input.GetKeyDown(KeyCode.H))
+		{
+			WinLevel();
+		}
+		if (Input.GetKeyDown(KeyCode.Alpha0))
+		{
+			SceneManager.LoadScene(0);
+		}
+	}
+
     public void OnPlayerMove()
     {
         //update enemies
