@@ -317,7 +317,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 9d07247b7c9504e3d836cdd73fa6fa21, type: 3}
+  m_audioClip: {fileID: 8300000, guid: e96d2a4dde2c24660b3108fa0ba812da, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.226
   m_Pitch: 1
@@ -471,3 +471,4 @@ MonoBehaviour:
   whistle: {fileID: 82000012533497224}
   stab: {fileID: 82000013256195938}
   scare: {fileID: 82000012625414660}
+  stepping: {fileID: 1000013081777168, guid: df9291677335d42479e9da997c5ade7b, type: 2}
