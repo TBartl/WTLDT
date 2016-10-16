@@ -11,7 +11,7 @@ public class SoundManager : MonoBehaviour {
 	public AudioSource stab;
 	public AudioSource scare;
 
-	List<AudioSource> audioqueue;
+	public GameObject stepping;
 
 	void Awake ()
 	{
@@ -28,7 +28,6 @@ public class SoundManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		audioqueue = new List<AudioSource>();
 	}
 
 	// Update is called once per frame
@@ -37,9 +36,9 @@ public class SoundManager : MonoBehaviour {
 	}
 
 	public void StartStep() {
-		if (!step.isPlaying)
-			step.Play ();
-
+		//if (!step.isPlaying)
+		//step.Play ();
+		Instantiate (stepping);
 	}
 
 	public void StartWhistle()

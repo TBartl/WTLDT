@@ -7,6 +7,8 @@ public class AudioManager : MonoBehaviour {
 
 	public AudioSource mainMusic;
 	public AudioSource chaseMusic;
+	public AudioSource mainMusic2;
+	public AudioSource chaseMusic2;
 
 	void Awake ()
 	{
