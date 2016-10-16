@@ -486,7 +486,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   alternative_dialogues:
   - I can skip the level with 'H'
-  - Press 'U' to make me invinsible
+  - Press 'U' to make me invincible
   - Stop making me die please.
   - Ow. That hurt. Just a little bit.
   - Do me a favor and get good.
@@ -501,3 +501,5 @@ MonoBehaviour:
   - THIS GAME KEEPS RESPAWNING ME, I CAN'T DIE IN PEACE
   - Don't you have anything better to do besides making me die a lot?
   - ARGHGHGHG THE PAIN
+  - I don't know about you, but I don't like dying.
+  - Tell my mom I lov.... wait I'm still alive.
