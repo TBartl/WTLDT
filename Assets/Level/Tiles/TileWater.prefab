@@ -83,8 +83,8 @@ MeshRenderer:
   m_GameObject: {fileID: 1000013571357732}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_MotionVectors: 1
+  m_ReceiveShadows: 0
+  m_MotionVectors: 0
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
@@ -117,7 +117,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: b35f04f4f84df1a4ab1f5ccee74c6c84, type: 2}
+  - {fileID: 2100000, guid: 1cd6a7d3f05b708449d9fa3e5c8e684b, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
@@ -139,14 +139,14 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013571357732}
-  m_Mesh: {fileID: 4300006, guid: ca4bd39f0de841146b8b280d0f3702f5, type: 3}
+  m_Mesh: {fileID: 4300016, guid: ca4bd39f0de841146b8b280d0f3702f5, type: 3}
 --- !u!33 &33000013595853298
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010597703836}
-  m_Mesh: {fileID: 4300006, guid: ca4bd39f0de841146b8b280d0f3702f5, type: 3}
+  m_Mesh: {fileID: 4300018, guid: ca4bd39f0de841146b8b280d0f3702f5, type: 3}
 --- !u!114 &114000011751423590
 MonoBehaviour:
   m_ObjectHideFlags: 1

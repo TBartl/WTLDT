@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class SoundManager : MonoBehaviour {
 
@@ -9,6 +10,8 @@ public class SoundManager : MonoBehaviour {
 	public AudioSource whistle;
 	public AudioSource stab;
 	public AudioSource scare;
+
+	List<AudioSource> audioqueue;
 
 	void Awake ()
 	{
@@ -25,7 +28,7 @@ public class SoundManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+		audioqueue = new List<AudioSource>();
 	}
 
 	// Update is called once per frame
@@ -34,7 +37,9 @@ public class SoundManager : MonoBehaviour {
 	}
 
 	public void StartStep() {
-		step.Play ();
+		if (!step.isPlaying)
+			step.Play ();
+
 	}
 
 	public void StartWhistle()
