@@ -5,7 +5,9 @@ public class StepSound : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		GetComponent<AudioSource> ().Play ();
+		AudioSource s = GetComponent<AudioSource>();
+		s.timeSamples = 15000;
+		s.Play ();
 	}
 	
 	// Update is called once per frame
