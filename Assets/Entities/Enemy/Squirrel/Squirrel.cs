@@ -8,7 +8,7 @@ public class Squirrel : Enemy {
 
 	// Use this for initialization
 	protected override void Start () {
-		moveDistance = 3;
+		moveDistance = 2;
         base.Start();
 		if (squirrelDir == Direction.NORTH)
             SetRotation(0);
@@ -25,31 +25,42 @@ public class Squirrel : Enemy {
         IntVector2 initialPos = pos;
         if (!alarmRaised)
         {           
+
+			if (moveDistance <= 0) {
+				SetRotation(GetRotation() + 90);
+				moveDistance = 2;
+			}
+
+
             if (GetDirectionFacing() == Direction.EAST)
             {
                 movePos.x += 1;
                 MoveIfAble(movePos);
+				moveDistance--;
             }
             else if (GetDirectionFacing() == Direction.WEST)
             {
                 movePos.x -= 1;
                 MoveIfAble(movePos);
+				moveDistance--;
             }
             else if (GetDirectionFacing() == Direction.NORTH)
             {
                 movePos.y += 1;
                 MoveIfAble(movePos);
+				moveDistance--;
             }
             else if (GetDirectionFacing() == Direction.SOUTH)
             {
                 movePos.y -= 1;
                 MoveIfAble(movePos);
+				moveDistance--;
             }
-            //If unable to move, reverse direction
-            if (pos == initialPos)
-            {
-                SetRotation(GetRotation() + 180);
-            }
+//            //If unable to move, reverse direction
+//            if (pos == initialPos)
+//            {
+//                SetRotation(GetRotation() + 180);
+//            }
             if (CanSeePlayer(GetDirectionFacing()))
             {
                 RaiseAlarm();

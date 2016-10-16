@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Entities/Enemy/Wolf/Wolf_Vertical 1.prefab.meta
 guid: ccf586af5b24ade42addee48e75561d4
+=======
+guid: 42c0cf5b76b1c41b7bc1f53425a8a93f
+>>>>>>> 1bf36126fc9c8c49dedaed8d8504f8a1c1f4f0d2:Assets/Entities/Enemy/Wolf/Wolf_Horizontal.prefab.meta
 timeCreated: 1476552115
 licenseType: Free
 NativeFormatImporter:
