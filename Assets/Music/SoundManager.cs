@@ -43,7 +43,7 @@ public class SoundManager : MonoBehaviour {
 	}
 
 	public void StartStab() {
-		stab.Play ();
+		stab.Play ();	
 	}
 
 	public void StartScare() {
