@@ -78,6 +78,9 @@ public class Bird : Enemy {
 
 	public override bool CanSeePlayer(Direction dir)
 	{
+		if (Game_Manager.undetectable)
+			return false;
+
 		if (CanSeePlayerDirectionless())
 		{
 			if (Mathf.Abs (PlayerMovement.S.pos.x - pos.x) <= 1 && Mathf.Abs (PlayerMovement.S.pos.y - pos.y) <= 1) {
