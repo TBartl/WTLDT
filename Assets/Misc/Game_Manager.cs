@@ -9,6 +9,8 @@ public class Game_Manager : MonoBehaviour {
     public static Game_Manager S;
 	public bool levelEnding = false;
 
+	public static int deathCount;
+
 	float inactiveTime = 0;
 
 	public static bool undetectable = false;
@@ -17,6 +19,12 @@ public class Game_Manager : MonoBehaviour {
     {
         S = this;
     }
+
+	void Start() {
+		if (deathCount > 5) {
+			OtherDialogues.OD.ChangeDialogue ();
+		}
+	}
 
 	void Update()
 	{
@@ -62,6 +70,7 @@ public class Game_Manager : MonoBehaviour {
 		levelEnding = true;
 		for (float f = 0; f < 1f; f += Time.deltaTime)
 			yield return null;
+		deathCount++;
 		int scene = SceneManager.GetActiveScene().buildIndex;
 		SceneManager.LoadScene(scene);
 	}
@@ -75,6 +84,7 @@ public class Game_Manager : MonoBehaviour {
 		levelEnding = true;
 		for (float f = 0; f < 1f; f += Time.deltaTime)
 			yield return null;
+		deathCount = 0;
 		int scene = SceneManager.GetActiveScene().buildIndex;
 		if (scene == 8) {
 			AudioManager.S.changeMusic ();

@@ -84,6 +84,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000010656009804}
   - 114: {fileID: 114000010400486944}
+  - 114: {fileID: 114000011128909368}
   m_Layer: 0
   m_Name: SoundManager
   m_TagString: Untagged
@@ -472,3 +473,23 @@ MonoBehaviour:
   stab: {fileID: 82000013256195938}
   scare: {fileID: 82000012625414660}
   stepping: {fileID: 1000013081777168, guid: df9291677335d42479e9da997c5ade7b, type: 2}
+--- !u!114 &114000011128909368
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000014182089720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d97c0510d51704c70a7907d570c60a0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  alternative_dialogues:
+  - I can skip the level with 'H'
+  - Press 'U' to make me invinsible
+  - Stop making me die please.
+  - Ow. That hurt. Just a little bit.
+  - Do me a favor and get good.
+  - How can you stand to see my cute rabbit body get obliterated?
+  - MY LEG, MY LEG
+  - Wanna switch places?
