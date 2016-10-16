@@ -299,7 +299,7 @@ Prefab:
     - target: {fileID: 114000013842543380, guid: 37b49594023251843989eec7fe36393e,
         type: 2}
       propertyPath: m_Text
-      value: They killed my friend Harambe too!
+      value: A mole! Good thing he has his back to me! I'll watch him move.
       objectReference: {fileID: 0}
     - target: {fileID: 114000010937378772, guid: 37b49594023251843989eec7fe36393e,
         type: 2}
@@ -568,12 +568,13 @@ Prefab:
         type: 2}
       propertyPath: tileProperties.Array.data[5].occupant
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1000011633317834, guid: 69cb2a0207e664c40982d71f005ed9c8,
+        type: 2}
     - target: {fileID: 114000013507247932, guid: 46d38da308ec7ea4eb993fe5090fbc26,
         type: 2}
       propertyPath: tileProperties.Array.data[5].prefab
       value: 
-      objectReference: {fileID: 1000012517458186, guid: 3f9fb1e9235171d4083d5e888a0ea40a,
+      objectReference: {fileID: 1000012517458186, guid: e46281154627a4b459f42805cbe27636,
         type: 2}
     - target: {fileID: 114000013507247932, guid: 46d38da308ec7ea4eb993fe5090fbc26,
         type: 2}
@@ -644,12 +645,12 @@ Prefab:
         type: 2}
       propertyPath: textFile
       value: 
-      objectReference: {fileID: 4900000, guid: 96bab81f6657069479d61e670f7cce16, type: 3}
+      objectReference: {fileID: 4900000, guid: 9ea21fb25f5ba1f4593eae5955d582e4, type: 3}
     - target: {fileID: 114000013507247932, guid: 46d38da308ec7ea4eb993fe5090fbc26,
         type: 2}
       propertyPath: tileProperties.Array.data[8].prefab
       value: 
-      objectReference: {fileID: 1000012517458186, guid: 3f9fb1e9235171d4083d5e888a0ea40a,
+      objectReference: {fileID: 1000012517458186, guid: e46281154627a4b459f42805cbe27636,
         type: 2}
     - target: {fileID: 114000013507247932, guid: 46d38da308ec7ea4eb993fe5090fbc26,
         type: 2}
@@ -680,13 +681,13 @@ Prefab:
         type: 2}
       propertyPath: tileProperties.Array.data[9].occupant
       value: 
-      objectReference: {fileID: 1000011633317834, guid: df422d2c2ba96184ca62b19370a309ab,
+      objectReference: {fileID: 1000010037650760, guid: 8f65e8a55734f6843895d2d6992a143e,
         type: 2}
     - target: {fileID: 114000013507247932, guid: 46d38da308ec7ea4eb993fe5090fbc26,
         type: 2}
       propertyPath: tileProperties.Array.data[9].prefab
       value: 
-      objectReference: {fileID: 1000012517458186, guid: e46281154627a4b459f42805cbe27636,
+      objectReference: {fileID: 1000012517458186, guid: 3f9fb1e9235171d4083d5e888a0ea40a,
         type: 2}
     - target: {fileID: 114000013507247932, guid: 46d38da308ec7ea4eb993fe5090fbc26,
         type: 2}
