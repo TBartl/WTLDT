@@ -19,6 +19,7 @@ ModelImporter:
     100022: Bone_003_R_001
     100024: Bone_004
     100026: Lion
+    100028: Bird
     400000: Armature
     400002: //RootNode
     400004: Bone
@@ -33,7 +34,9 @@ ModelImporter:
     400022: Bone_003_R_001
     400024: Bone_004
     400026: Lion
+    400028: Bird
     4300000: Lion
+    4300002: Bird
     7400000: Default Take
     7400002: Idle
     7400004: Jump
@@ -41,6 +44,7 @@ ModelImporter:
     9500000: //RootNode
     11100000: //RootNode
     13700000: Lion
+    13700002: Bird
   materials:
     importMaterials: 0
     materialName: 0
@@ -122,7 +126,7 @@ ModelImporter:
       name: Idle
       takeName: Idle
       firstFrame: 0
-      lastFrame: 58
+      lastFrame: 29
       wrapMode: 2
       orientationOffsetY: 0
       level: 0
