@@ -279,7 +279,7 @@ Prefab:
     - target: {fileID: 114000013842543380, guid: 37b49594023251843989eec7fe36393e,
         type: 2}
       propertyPath: m_Text
-      value: I'm the fast and the furriest.
+      value: The king is about to have a bad hare day.
       objectReference: {fileID: 0}
     - target: {fileID: 114000010937378772, guid: 37b49594023251843989eec7fe36393e,
         type: 2}
@@ -625,7 +625,7 @@ Prefab:
         type: 2}
       propertyPath: textFile
       value: 
-      objectReference: {fileID: 4900000, guid: b208ad890a459463b951fc2352b075a8, type: 3}
+      objectReference: {fileID: 4900000, guid: 5e1db757c7fcd544aa9a94660c11267c, type: 3}
     - target: {fileID: 114000013507247932, guid: 46d38da308ec7ea4eb993fe5090fbc26,
         type: 2}
       propertyPath: tileProperties.Array.data[8].prefab
