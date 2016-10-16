@@ -31,6 +31,10 @@ public class AudioManager : MonoBehaviour {
 	
 	}
 
+	public void changeMusic() {
+		mainMusic.Play ();
+	}
+
 	public void StartChase()
 	{
 		mainMusic.Stop();

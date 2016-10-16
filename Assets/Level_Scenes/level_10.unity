@@ -299,7 +299,7 @@ Prefab:
     - target: {fileID: 114000013842543380, guid: 37b49594023251843989eec7fe36393e,
         type: 2}
       propertyPath: m_Text
-      value: 
+      value: How many kings are there?!
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 37b49594023251843989eec7fe36393e, type: 2}
@@ -676,7 +676,7 @@ Prefab:
         type: 2}
       propertyPath: tileProperties.Array.data[9].occupant
       value: 
-      objectReference: {fileID: 1000010801755632, guid: c74bd072e569c0b459ed26bac5e5f810,
+      objectReference: {fileID: 1000010801755632, guid: c220c8d9068254f99bd379e81915f978,
         type: 2}
     - target: {fileID: 114000013507247932, guid: 46d38da308ec7ea4eb993fe5090fbc26,
         type: 2}
@@ -687,7 +687,7 @@ Prefab:
     - target: {fileID: 114000013507247932, guid: 46d38da308ec7ea4eb993fe5090fbc26,
         type: 2}
       propertyPath: tileProperties.Array.data[9].asciiChar
-      value: 119
+      value: 88
       objectReference: {fileID: 0}
     - target: {fileID: 114000013507247932, guid: 46d38da308ec7ea4eb993fe5090fbc26,
         type: 2}
@@ -823,7 +823,7 @@ Prefab:
     - target: {fileID: 114000013507247932, guid: 46d38da308ec7ea4eb993fe5090fbc26,
         type: 2}
       propertyPath: tileProperties.Array.data[15].asciiChar
-      value: 87
+      value: 89
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 46d38da308ec7ea4eb993fe5090fbc26, type: 2}
