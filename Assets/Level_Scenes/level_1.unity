@@ -274,7 +274,12 @@ Prefab:
     - target: {fileID: 114000013842543380, guid: 37b49594023251843989eec7fe36393e,
         type: 2}
       propertyPath: m_Text
-      value: Who want's some king for dinner?
+      value: All animals are enemies! Kill the king!!
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010937378772, guid: 37b49594023251843989eec7fe36393e,
+        type: 2}
+      propertyPath: time
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 37b49594023251843989eec7fe36393e, type: 2}

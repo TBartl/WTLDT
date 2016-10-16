@@ -299,7 +299,7 @@ Prefab:
     - target: {fileID: 114000013842543380, guid: 37b49594023251843989eec7fe36393e,
         type: 2}
       propertyPath: m_Text
-      value: I'm the fast and the furriest.
+      value: They killed my friend Harambe too!
       objectReference: {fileID: 0}
     - target: {fileID: 114000010937378772, guid: 37b49594023251843989eec7fe36393e,
         type: 2}

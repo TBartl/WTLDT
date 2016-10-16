@@ -49,7 +49,7 @@ public class Game_Manager : MonoBehaviour {
 			AudioManager.S.changeMusic ();
 		} 
 		// Change this number later
-		else if (scene == 9) {
+		else if (scene == 12) {
 			AudioManager.S.ChangeToCreditMusic ();
 		}
 		SceneManager.LoadScene(scene + 1);
