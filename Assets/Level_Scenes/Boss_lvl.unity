@@ -770,7 +770,7 @@ Prefab:
         type: 2}
       propertyPath: tileProperties.Array.data[13].occupant
       value: 
-      objectReference: {fileID: 1000010801755632, guid: 42c0cf5b76b1c41b7bc1f53425a8a93f,
+      objectReference: {fileID: 1000010801755632, guid: c7102eeb45f1fac4085c1ab84e14a4c8,
         type: 2}
     - target: {fileID: 114000013507247932, guid: 46d38da308ec7ea4eb993fe5090fbc26,
         type: 2}
@@ -852,6 +852,11 @@ Prefab:
         type: 2}
       propertyPath: tileProperties.Array.data[16].visionBlock
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013507247932, guid: 46d38da308ec7ea4eb993fe5090fbc26,
+        type: 2}
+      propertyPath: tileProperties.Array.data[1].occupant
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 46d38da308ec7ea4eb993fe5090fbc26, type: 2}
