@@ -62,6 +62,20 @@ public class Bird : Enemy {
 		}
 	}
 
+	protected override void MoveIfAble(IntVector2 newPos)
+	{
+		if (LevelManager.S.InBounds(newPos) && 
+			(LevelManager.S.realData[newPos.x, newPos.y].passable == true || LevelManager.S.realData[newPos.x, newPos.y].prefab.tag == "Water") && 
+			(LevelManager.S.realData[newPos.x, newPos.y].occupant == null || (LevelManager.S.realData[newPos.x, newPos.y].occupant != null && LevelManager.S.realData[newPos.x, newPos.y].occupant.tag == "Collectable")))
+		{
+			Move(newPos);
+		}
+		else
+		{
+			StartCoroutine(SmoothHit(pos, newPos));
+		}
+	}
+
 	public override bool CanSeePlayer(Direction dir)
 	{
 		if (CanSeePlayerDirectionless())

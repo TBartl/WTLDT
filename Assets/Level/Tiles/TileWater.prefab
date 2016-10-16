@@ -43,7 +43,7 @@ GameObject:
   - 114: {fileID: 114000013055142434}
   m_Layer: 0
   m_Name: TileWater
-  m_TagString: Untagged
+  m_TagString: Water
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
