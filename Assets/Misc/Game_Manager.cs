@@ -45,6 +45,9 @@ public class Game_Manager : MonoBehaviour {
 		for (float f = 0; f < 1f; f += Time.deltaTime)
 			yield return null;
 		int scene = SceneManager.GetActiveScene().buildIndex;
+		if (scene == 8) {
+			AudioManager.S.changeMusic ();
+		}
 		SceneManager.LoadScene(scene + 1);
 	}
 }

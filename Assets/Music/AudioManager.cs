@@ -34,6 +34,10 @@ public class AudioManager : MonoBehaviour {
 	}
 
 	public void changeMusic() {
+		mainMusic.Stop ();
+		chaseMusic.Stop ();
+		mainMusic = mainMusic2;
+		chaseMusic = chaseMusic2;
 		mainMusic.Play ();
 	}
 
