@@ -4,14 +4,16 @@ using System.Collections.Generic;
 
 public class Lightable : MonoBehaviour {
 	Color originalColor;
-	MeshRenderer mr;
+	Renderer mr;
 	public List<Lightable> children;
 
 	public void Awake()
 	{
-		mr = this.GetComponent<MeshRenderer>();
-		originalColor = mr.material.color;
+		mr = this.GetComponent<Renderer>();
+		if (mr == null)
+			return;
 
+		originalColor = mr.material.color;
 		UpdateLight(LightAmount.black, false);
 	}
 
@@ -24,6 +26,10 @@ public class Lightable : MonoBehaviour {
 				c.UpdateLight(l, andChildrenLight);
 			}
 		}
+
+		if (mr == null)
+			return;
+
 		Color newColor = Color.black;
 		mr.enabled = true;
 		if (l == LightAmount.black)
@@ -52,6 +58,22 @@ public class Lightable : MonoBehaviour {
 			yield return null;
 		}
 		mr.material.color = toCol;
+	}
 
+	public void HideAfterAFrame()
+	{
+		StartCoroutine(Hide());
+
+	}
+	IEnumerator Hide()
+	{
+		yield return null;
+		foreach (Lightable c in children)
+		{
+			if (c.mr)
+				c.mr.enabled = false;
+		}
+		if (mr)
+			mr.enabled = false;
 	}
 }

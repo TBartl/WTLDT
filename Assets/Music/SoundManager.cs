@@ -8,6 +8,7 @@ public class SoundManager : MonoBehaviour {
 	public AudioSource step;
 	public AudioSource whistle;
 	public AudioSource stab;
+	public AudioSource scare;
 
 	void Awake ()
 	{
@@ -42,7 +43,11 @@ public class SoundManager : MonoBehaviour {
 	}
 
 	public void StartStab() {
-		stab.Play ();
+		stab.Play ();	
+	}
+
+	public void StartScare() {
+		scare.Play ();
 	}
 
 }
