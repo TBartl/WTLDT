@@ -27,7 +27,7 @@ public class Game_Manager : MonoBehaviour {
 		int scene = SceneManager.GetActiveScene().buildIndex;
 		if (scene <= 8) {
 			AudioManager.S.musiclevel = 1;
-		} else if (scene > 8 && scene < 19) {
+		} else if (scene > 8 && scene != 19) {
 			AudioManager.S.musiclevel = 2;
 		} else {
 			AudioManager.S.musiclevel = 3;
@@ -102,6 +102,8 @@ public class Game_Manager : MonoBehaviour {
 		else if (scene == 18) {
 			AudioManager.S.ChangeToCreditMusic ();
 		}
+		else if (scene == 19)
+			AudioManager.S.changeMusic ();
 		SceneManager.LoadScene(scene + 1);
 	}
 }

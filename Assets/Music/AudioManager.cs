@@ -50,6 +50,7 @@ public class AudioManager : MonoBehaviour {
 	public void changeMusic() {
 		mainMusic.Stop ();
 		chaseMusic.Stop ();
+		creditMusic.Stop ();
 		musiclevel = 2;
 		mainMusic2.Play ();
 	}
