@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class BackgroundManager : MonoBehaviour {
-	static bool useAlt = false;
+	static bool useAlt = true;
 	public GameObject background1;
 	public GameObject background2;
 
@@ -10,8 +10,8 @@ public class BackgroundManager : MonoBehaviour {
 	{
 		if (useAlt)
 		{
-			background1.SetActive(false);
-			background2.SetActive(true);
+			background1.SetActive(!useAlt);
+			background2.SetActive(useAlt);
 		}
 	}
 
